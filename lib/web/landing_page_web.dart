@@ -47,23 +47,33 @@ class _LandingPageWebState extends State<LandingPageWeb> {
       ),
       //The Main body of the web application
       body: ListView(
-        children:[Container(
+        children:[
+          Container(
           height: heightDevice-56,
-          child: CircleAvatar(
-            //Creates the circle avatar and the outer blue circle
-            radius:147.0,
-            backgroundColor: Colors.blue,
-            child: CircleAvatar(
-              //Inner black circle
-              radius:143,
-              backgroundColor: Colors.black,
-              child: CircleAvatar(
-                //Image of the avatar
-                radius:140,
-                backgroundColor: Colors.white,
-                backgroundImage: AssetImage("J.png"),
+          child: Row(
+            children: [
+              Column(
+                children: [
+                  Text("Hello"),
+                ],
               ),
-            ),
+              CircleAvatar(
+                //Creates the circle avatar and the outer blue circle
+                radius:147.0,
+                backgroundColor: Colors.blue,
+                child: CircleAvatar(
+                  //Inner black circle
+                  radius:143,
+                  backgroundColor: Colors.black,
+                  child: CircleAvatar(
+                    //Image of the avatar
+                    radius:140,
+                    backgroundColor: Colors.white,
+                    backgroundImage: AssetImage("J.png"),
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
         ]
