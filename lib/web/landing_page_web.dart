@@ -195,95 +195,104 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Card(
-                      elevation: 30.0,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15.0)
-                      ),
-                      shadowColor: Colors.blue,
-                      child: Padding(
-                        padding: const EdgeInsets.all(15.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Image.asset(
-                              "java.png", 
-                              height: 200,
-                              width: 200,
-                              fit: BoxFit.contain,
-                            ),
-                            SizedBox(height: 10,),
-                            Sans("Java", 20)
-                          ]
-                        ),
-                      ),
-                    ),
-                    Card(
-                      elevation: 30.0,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15.0)
-                      ),
-                      shadowColor: Colors.blue,
-                      child: Padding(
-                        padding: const EdgeInsets.all(15.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Image.asset(
-                              "cpp.png", 
-                              height: 200,
-                              width: 200,
-                            ),
-                            SizedBox(height: 10,),
-                            Sans("C++", 20)
-                          ]
-                        ),
-                      ),
-                    ),
-                    Card(
-                      elevation: 30.0,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15.0)
-                      ),
-                      shadowColor: Colors.blue,
-                      child: Padding(
-                        padding: const EdgeInsets.all(15.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Image.asset(
-                              "flutter.png", 
-                              height: 200,
-                              width: 200,
-                            ),
-                            SizedBox(height: 10,),
-                            Sans("Flutter", 20)
-                          ]
-                        ),
-                      ),
-                    ),
-                    Card(
-                      elevation: 30.0,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15.0)
-                      ),
-                      shadowColor: Colors.blue,
-                      child: Padding(
-                        padding: const EdgeInsets.all(15.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Image.asset(
-                              "firebase.png", 
-                              height: 200,
-                              width: 200,
-                            ),
-                            SizedBox(height: 10,),
-                            Sans("Firebase", 20)
-                          ]
-                        ),
-                      ),
-                    ),
+                    // Card(
+                    //   elevation: 30.0,
+                    //   shape: RoundedRectangleBorder(
+                    //     borderRadius: BorderRadius.circular(15.0),
+                    //     side: BorderSide(color: Colors.blueAccent),
+
+                    //   ),
+                    //   shadowColor: Colors.blue,
+                    //   child: Padding(
+                    //     padding: const EdgeInsets.all(15.0),
+                    //     child: Column(
+                    //       crossAxisAlignment: CrossAxisAlignment.start,
+                    //       children: [
+                    //         Image.asset(
+                    //           "java.png", 
+                    //           height: 200,
+                    //           width: 200,
+                    //           fit: BoxFit.contain,
+                    //         ),
+                    //         SizedBox(height: 10,),
+                    //         Sans("Java", 20)
+                    //       ]
+                    //     ),
+                    //   ),
+                    // ),
+                    // Card(
+                    //   elevation: 30.0,
+                    //   shape: RoundedRectangleBorder(
+                    //     borderRadius: BorderRadius.circular(15.0),
+                    //     side: BorderSide(color: Colors.blueAccent),
+                    //   ),
+                    //   shadowColor: Colors.blue,
+                    //   child: Padding(
+                    //     padding: const EdgeInsets.all(15.0),
+                    //     child: Column(
+                    //       crossAxisAlignment: CrossAxisAlignment.start,
+                    //       children: [
+                    //         Image.asset(
+                    //           "cpp.png", 
+                    //           height: 200,
+                    //           width: 200,
+                    //         ),
+                    //         SizedBox(height: 10,),
+                    //         Sans("C++", 20)
+                    //       ]
+                    //     ),
+                    //   ),
+                    // ),
+                    // Card(
+                    //   elevation: 30.0,
+                    //   shape: RoundedRectangleBorder(
+                    //     borderRadius: BorderRadius.circular(15.0),
+                    //     side: BorderSide(color: Colors.blueAccent),
+                    //   ),
+                    //   shadowColor: Colors.blue,
+                    //   child: Padding(
+                    //     padding: const EdgeInsets.all(15.0),
+                    //     child: Column(
+                    //       crossAxisAlignment: CrossAxisAlignment.start,
+                    //       children: [
+                    //         Image.asset(
+                    //           "flutter.png", 
+                    //           height: 200,
+                    //           width: 200,
+                    //         ),
+                    //         SizedBox(height: 10,),
+                    //         Sans("Flutter", 20)
+                    //       ]
+                    //     ),
+                    //   ),
+                    // ),
+                    // Card(
+                    //   elevation: 30.0,
+                    //   shape: RoundedRectangleBorder(
+                    //     borderRadius: BorderRadius.circular(15.0),
+                    //     side: BorderSide(color: Colors.blueAccent),
+                    //   ),
+                    //   shadowColor: Colors.blue,
+                    //   child: Padding(
+                    //     padding: const EdgeInsets.all(15.0),
+                    //     child: Column(
+                    //       crossAxisAlignment: CrossAxisAlignment.start,
+                    //       children: [
+                    //         Image.asset(
+                    //           "firebase.png", 
+                    //           height: 200,
+                    //           width: 200,
+                    //         ),
+                    //         SizedBox(height: 10,),
+                    //         Sans("Firebase", 20)
+                    //       ]
+                    //     ),
+                    //   ),
+                    // ),
+                    AnimatedCardWeb(imagePath: "firebase.png", text: "Firebase"),
+                    AnimatedCardWeb(imagePath: "flutter.png", text: "Flutter", fit: BoxFit.contain, reverese: true,),
+                    AnimatedCardWeb(imagePath: "java.png", text: "Java"),
+                    AnimatedCardWeb(imagePath: "cpp.png", text: "C++", reverese: true,)
                   ],
                 )
               ],
@@ -321,10 +330,24 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                   width: widthDevice/1.5, 
                   hintText: "Please type your message", 
                   maxLine: 10,
+                ),
+                MaterialButton(
+                  elevation: 20.0,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0)
+                  ),
+                  height: 60.0,
+                  minWidth: 200.0,
+                  color:Colors.blueAccent,
+                  child:SansBold("Submit", 20.0),
+                  onPressed: (){
+
+                  }
                 )
               ]
             ),
           ),
+          SizedBox(height: 10.0,)
         ]
       ),
     );

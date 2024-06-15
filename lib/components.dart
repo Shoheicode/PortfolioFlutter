@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class TabsWeb extends StatefulWidget{
@@ -104,9 +105,17 @@ class TextForm extends StatelessWidget{
                   width: width,
                   
                   child: TextFormField(
+                    //RegExp('[a-z]'), only included the lower case letters, no upper case
+                    // inputFormatters: [
+                    //   FilteringTextInputFormatter.allow(RegExp('[a-zA-Zs]'))
+                    // ], Something that you can implement
                     maxLines: maxLine == null ? null: maxLine,
                     //How to add decoration around the text form field
                     decoration: InputDecoration(
+                      focusedErrorBorder: const OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.red),
+                        borderRadius: BorderRadius.all(Radius.circular(10.0))
+                      ),
                       enabledBorder: const OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.blue),
                         borderRadius: BorderRadius.all(Radius.circular(10.0))
@@ -118,10 +127,83 @@ class TextForm extends StatelessWidget{
                       hintText: hintText,
                       hintStyle: GoogleFonts.poppins(fontSize: 14)
                     ),
+                    // validator: (text){
+                    //   if(RegExp("\\bjason\\b", caseSensitive: false).hasMatch(text.toString())){
+                    //     return "Match found";
+                    //   }
+                    // },
+                    // //autovalidates when user interacts with interface
+                    // autovalidateMode: AutovalidateMode.onUserInteraction,
                   ),
                 ),
               ],
             );
+  }
+
+}
+
+class AnimatedCardWeb extends StatefulWidget{
+  final imagePath;
+  final text;
+  final fit;
+  final reverese;
+  const AnimatedCardWeb({super.key,  @required this.imagePath, @required this.text, this.fit, this.reverese});
+
+  @override
+  State<StatefulWidget> createState() =>_AnimatedCardWebState();
+
+}
+
+class _AnimatedCardWebState extends State<AnimatedCardWeb> with SingleTickerProviderStateMixin{
+
+  //Controlling the animations and how long the animations take
+  late AnimationController _controller = AnimationController(
+    vsync: this,
+    duration: const Duration(seconds: 4),
+  )..repeat(reverse: true);
+
+  //Added the animation of for the animation controller to use
+  late Animation<Offset> _animation = Tween(
+    begin: widget.reverese == true ? Offset(0, 0.08) : Offset.zero,
+    end: widget.reverese == true ? Offset.zero : Offset(0, 0.08), 
+  ).animate(_controller);
+
+  @override
+  void dispose(){
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return SlideTransition(
+      position: _animation,
+      child: Card(
+              elevation: 30.0,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15.0),
+                side: BorderSide(color: Colors.blueAccent),
+              ),
+              shadowColor: Colors.blue,
+              child: Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Image.asset(
+                      widget.imagePath, 
+                      height: 200,
+                      width: 200,
+                      fit: widget.fit == null ? null : widget.fit,
+                    ),
+                    SizedBox(height: 10,),
+                    Sans(widget.text, 20)
+                  ]
+                ),
+              ),
+            ),
+    );
   }
 
 }
