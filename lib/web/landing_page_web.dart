@@ -12,7 +12,9 @@ class LandingPageWeb extends StatefulWidget{
 class _LandingPageWebState extends State<LandingPageWeb> {
   @override
   Widget build(BuildContext context) {
-    bool isSelected = false;
+    var heightDevice = MediaQuery.of(context).size.height;
+
+
     // TODO: implement build
     return Scaffold(
       drawer:Drawer(),
@@ -24,21 +26,24 @@ class _LandingPageWebState extends State<LandingPageWeb> {
           size: 25.0,
           color: Colors.black
         ),
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Spacer(flex: 3,),
-              TabsWeb("Home"),
-              Spacer(),
-              TabsWeb("Projects"),
-              Spacer(),
-              TabsWeb("Blog"),
-              Spacer(),
-              TabsWeb("About"),
-              Spacer(),
-              TabsWeb("Contact")
-            ]
-          ),
+        title: Container(
+          height: heightDevice-56,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Spacer(flex: 3,),
+                TabsWeb("Home"),
+                Spacer(),
+                TabsWeb("Projects"),
+                Spacer(),
+                TabsWeb("Blog"),
+                Spacer(),
+                TabsWeb("About"),
+                Spacer(),
+                TabsWeb("Contact")
+              ]
+            ),
+        ),
       ),
       body: CircleAvatar(
         radius:147.0,
