@@ -84,3 +84,44 @@ class Sans extends StatelessWidget{
   }
   
 }
+
+class TextForm extends StatelessWidget{
+  final heading;
+  final width;
+  final hintText;
+  final maxLine;
+
+  const TextForm({super.key,@required this.heading, @required this.width, @required this.hintText, this.maxLine});
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Sans(heading, 16.0),
+                SizedBox(height: 5.0),
+                SizedBox(
+                  width: width,
+                  
+                  child: TextFormField(
+                    maxLines: maxLine == null ? null: maxLine,
+                    //How to add decoration around the text form field
+                    decoration: InputDecoration(
+                      enabledBorder: const OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.blue),
+                        borderRadius: BorderRadius.all(Radius.circular(10.0))
+                      ),
+                      focusedBorder: const OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                        borderSide: BorderSide(color:Colors.lightBlueAccent, width: 2)
+                      ),
+                      hintText: hintText,
+                      hintStyle: GoogleFonts.poppins(fontSize: 14)
+                    ),
+                  ),
+                ),
+              ],
+            );
+  }
+
+}
