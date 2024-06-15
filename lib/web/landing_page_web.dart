@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/components.dart';
 
 class LandingPageWeb extends StatefulWidget{
@@ -51,28 +52,47 @@ class _LandingPageWebState extends State<LandingPageWeb> {
           Container(
           height: heightDevice-56,
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("Hello"),
+                  Container(
+                    decoration: BoxDecoration(
+                        color:Colors.blue,
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(20.0),
+                          topRight: Radius.circular(20.0),
+                          bottomRight: Radius.circular(20.0),
+
+                        )
+                    ),
+                    padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                    child: Text("Hello, I'm", 
+                      style: GoogleFonts.openSans(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
                 ],
               ),
               CircleAvatar(
-                //Creates the circle avatar and the outer blue circle
-                radius:147.0,
-                backgroundColor: Colors.blue,
-                child: CircleAvatar(
-                  //Inner black circle
-                  radius:143,
-                  backgroundColor: Colors.black,
-                  child: CircleAvatar(
-                    //Image of the avatar
-                    radius:140,
-                    backgroundColor: Colors.white,
-                    backgroundImage: AssetImage("J.png"),
+                    //Creates the circle avatar and the outer blue circle
+                    radius:147.0,
+                    backgroundColor: Colors.blue,
+                    child: CircleAvatar(
+                      //Inner black circle
+                      radius:143,
+                      backgroundColor: Colors.black,
+                      child: CircleAvatar(
+                        //Image of the avatar
+                        radius:140,
+                        backgroundColor: Colors.white,
+                        backgroundImage: AssetImage("J.png"),
+                      ),
+                    ),
                   ),
-                ),
-              ),
             ],
           ),
         ),
