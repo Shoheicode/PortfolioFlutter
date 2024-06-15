@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/components.dart';
 
 class LandingPageWeb extends StatefulWidget{
@@ -14,7 +15,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
   Widget build(BuildContext context) {
     //Gets the height of the device being used
     var heightDevice = MediaQuery.of(context).size.height;
-
+    var widthDevice = MediaQuery.of(context).size.width;
 
     // TODO: implement build
     return Scaffold(
@@ -80,7 +81,6 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                       Icon(Icons.email),
                       SizedBox(width: 20,),
                       Sans("jsirie10@gmail.com", 15),
-
 
                     ],
                   ),
@@ -185,7 +185,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
               ],
             ),
           ),
-          //Third Container with elements
+          //Third Container with specialties
           Container(
             height: heightDevice/1.3,
             child:Column(
@@ -210,6 +210,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                               "java.png", 
                               height: 200,
                               width: 200,
+                              fit: BoxFit.contain,
                             ),
                             SizedBox(height: 10,),
                             Sans("Java", 20)
@@ -239,11 +240,91 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                         ),
                       ),
                     ),
+                    Card(
+                      elevation: 30.0,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15.0)
+                      ),
+                      shadowColor: Colors.blue,
+                      child: Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Image.asset(
+                              "flutter.png", 
+                              height: 200,
+                              width: 200,
+                            ),
+                            SizedBox(height: 10,),
+                            Sans("Flutter", 20)
+                          ]
+                        ),
+                      ),
+                    ),
+                    Card(
+                      elevation: 30.0,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15.0)
+                      ),
+                      shadowColor: Colors.blue,
+                      child: Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Image.asset(
+                              "firebase.png", 
+                              height: 200,
+                              width: 200,
+                            ),
+                            SizedBox(height: 10,),
+                            Sans("Firebase", 20)
+                          ]
+                        ),
+                      ),
+                    ),
                   ],
                 )
               ],
             )
-          )
+          ),
+          //Fourth Container for contact information
+          Container(
+            height: heightDevice,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                SansBold("Contact Me", 40),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Column(
+
+                      children: [
+                        TextForm(heading: "First Name", width: 350, hintText: "Please enter first name", maxLine: 1,),
+                        SizedBox(height: 15,),
+                        TextForm(heading: "Email", width: 350, hintText: "Please enter in email", maxLine: 1,)
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        TextForm(heading: "Last Name", width: 350, hintText: "Please enter in laster name"),
+                        SizedBox(height: 15,),
+                        TextForm(heading: "Phone Number", width: 350, hintText: "Please enter in your phone number", maxLine: 1,)
+                      ],
+                    )
+                  ],
+                ),
+                TextForm(
+                  heading: "Message", 
+                  width: widthDevice/1.5, 
+                  hintText: "Please type your message", 
+                  maxLine: 10,
+                )
+              ]
+            ),
+          ),
         ]
       ),
     );
