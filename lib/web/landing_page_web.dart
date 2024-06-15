@@ -12,6 +12,7 @@ class LandingPageWeb extends StatefulWidget{
 class _LandingPageWebState extends State<LandingPageWeb> {
   @override
   Widget build(BuildContext context) {
+    //Gets the height of the device being used
     var heightDevice = MediaQuery.of(context).size.height;
 
 
@@ -22,41 +23,50 @@ class _LandingPageWebState extends State<LandingPageWeb> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0.0,
+        //Getting the Theme and setting how the default settings of webpage.
         iconTheme: IconThemeData(
           size: 25.0,
           color: Colors.black
         ),
-        title: Container(
-          height: heightDevice-56,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Spacer(flex: 3,),
-                TabsWeb("Home"),
-                Spacer(),
-                TabsWeb("Projects"),
-                Spacer(),
-                TabsWeb("Blog"),
-                Spacer(),
-                TabsWeb("About"),
-                Spacer(),
-                TabsWeb("Contact")
-              ]
-            ),
-        ),
+        //Sections of the App Bar
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Spacer(flex: 3,),
+              TabsWeb("Home"),
+              Spacer(),
+              TabsWeb("Projects"),
+              Spacer(),
+              TabsWeb("Blog"),
+              Spacer(),
+              TabsWeb("About"),
+              Spacer(),
+              TabsWeb("Contact")
+            ]
+          ),
       ),
-      body: CircleAvatar(
-        radius:147.0,
-        backgroundColor: Colors.blue,
-        child: CircleAvatar(
-          radius:143,
-          backgroundColor: Colors.black,
+      //The Main body of the web application
+      body: ListView(
+        children:[Container(
+          height: heightDevice-56,
           child: CircleAvatar(
-            radius:140,
-            backgroundColor: Colors.white,
-            backgroundImage: AssetImage("J.png"),
+            //Creates the circle avatar and the outer blue circle
+            radius:147.0,
+            backgroundColor: Colors.blue,
+            child: CircleAvatar(
+              //Inner black circle
+              radius:143,
+              backgroundColor: Colors.black,
+              child: CircleAvatar(
+                //Image of the avatar
+                radius:140,
+                backgroundColor: Colors.white,
+                backgroundImage: AssetImage("J.png"),
+              ),
+            ),
           ),
         ),
+        ]
       ),
     );
   }
