@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:portfolio/web/about_page.dart';
 
 class TabsWeb extends StatefulWidget{
   final title;
@@ -16,33 +17,42 @@ class _TabsWebState extends State<TabsWeb>{
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return MouseRegion(
-      onEnter: (e){
-        setState(() {
-          isSelected = true;
-        });
+    return MaterialButton(
+      onPressed: (){
+        print("HELLO");
+        if(widget.title == "Home"){
+          Navigator.of(context).pushNamed('/');
+        }
+        Navigator.of(context).pushNamed('/' + widget.title);
       },
-      onExit: (e){
-        setState(() {
-          isSelected = false;
-        });
-      },
-      child: AnimatedDefaultTextStyle(
-        duration: const Duration(milliseconds: 100),
-        curve: Curves.fastEaseInToSlowEaseOut,
-        style: isSelected ? GoogleFonts.oswald(
-          shadows: [Shadow(color:Colors.black, offset: Offset(0, -10,), )],
-            color:Colors.transparent,
-            fontSize: 25.0,
-            decoration: TextDecoration.underline,
-            decorationThickness: 1,
-            decorationColor: Colors.blue,
-          ) : 
-          GoogleFonts.oswald(
-            color:Colors.black,
-            fontSize: 23.0
-          ),
-        child: Text(widget.title),
+      child: MouseRegion(
+        onEnter: (e){
+          setState(() {
+            isSelected = true;
+          });
+        },
+        onExit: (e){
+          setState(() {
+            isSelected = false;
+          });
+        },
+        child: AnimatedDefaultTextStyle(
+          duration: const Duration(milliseconds: 100),
+          curve: Curves.fastEaseInToSlowEaseOut,
+          style: isSelected ? GoogleFonts.oswald(
+            shadows: [Shadow(color:Colors.black, offset: Offset(0, -10,), )],
+              color:Colors.transparent,
+              fontSize: 25.0,
+              decoration: TextDecoration.underline,
+              decorationThickness: 1,
+              decorationColor: Colors.blue,
+            ) : 
+            GoogleFonts.oswald(
+              color:Colors.black,
+              fontSize: 23.0
+            ),
+          child: Text(widget.title),
+        ),
       ),
     );
   }

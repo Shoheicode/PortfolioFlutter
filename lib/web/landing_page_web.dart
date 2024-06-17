@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/components.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class LandingPageWeb extends StatefulWidget{
   const LandingPageWeb({super.key});
@@ -11,6 +14,16 @@ class LandingPageWeb extends StatefulWidget{
 }
 
 class _LandingPageWebState extends State<LandingPageWeb> {
+  urlLauncher(String imgPath, String url){
+    return IconButton(
+      icon: Image.asset(imgPath, width: 35,filterQuality: FilterQuality.high,),
+      //Async allows for urls launched
+      onPressed: () async {
+        await launchUrl(Uri.parse(url));
+      },
+    );
+  }
+  
   @override
   Widget build(BuildContext context) {
     //Gets the height of the device being used
@@ -19,7 +32,34 @@ class _LandingPageWebState extends State<LandingPageWeb> {
 
     // TODO: implement build
     return Scaffold(
-      drawer:Drawer(),
+      drawer:Drawer(
+        backgroundColor: Colors.white,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CircleAvatar(
+              radius: 70,
+              backgroundColor: Colors.white,
+              backgroundImage: AssetImage("J.png"),
+            ),
+            SizedBox(height: 15,),
+            SansBold("Jason Irie", 30),
+            SizedBox(height: 15.0,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                urlLauncher("linkedin.png", "https://www.linkedin.com/in/jason-irie-2bb2b0243/"),
+                IconButton(
+                  icon: SvgPicture.asset("github.svg", color: Colors.black, width: 35.0),
+                  onPressed: () async {
+                    await launchUrl(Uri.parse("https://github.com/Shoheicode"));
+                  },
+                ),
+              ],
+            )
+          ]
+        ),
+      ),
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -195,100 +235,6 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    // Card(
-                    //   elevation: 30.0,
-                    //   shape: RoundedRectangleBorder(
-                    //     borderRadius: BorderRadius.circular(15.0),
-                    //     side: BorderSide(color: Colors.blueAccent),
-
-                    //   ),
-                    //   shadowColor: Colors.blue,
-                    //   child: Padding(
-                    //     padding: const EdgeInsets.all(15.0),
-                    //     child: Column(
-                    //       crossAxisAlignment: CrossAxisAlignment.start,
-                    //       children: [
-                    //         Image.asset(
-                    //           "java.png", 
-                    //           height: 200,
-                    //           width: 200,
-                    //           fit: BoxFit.contain,
-                    //         ),
-                    //         SizedBox(height: 10,),
-                    //         Sans("Java", 20)
-                    //       ]
-                    //     ),
-                    //   ),
-                    // ),
-                    // Card(
-                    //   elevation: 30.0,
-                    //   shape: RoundedRectangleBorder(
-                    //     borderRadius: BorderRadius.circular(15.0),
-                    //     side: BorderSide(color: Colors.blueAccent),
-                    //   ),
-                    //   shadowColor: Colors.blue,
-                    //   child: Padding(
-                    //     padding: const EdgeInsets.all(15.0),
-                    //     child: Column(
-                    //       crossAxisAlignment: CrossAxisAlignment.start,
-                    //       children: [
-                    //         Image.asset(
-                    //           "cpp.png", 
-                    //           height: 200,
-                    //           width: 200,
-                    //         ),
-                    //         SizedBox(height: 10,),
-                    //         Sans("C++", 20)
-                    //       ]
-                    //     ),
-                    //   ),
-                    // ),
-                    // Card(
-                    //   elevation: 30.0,
-                    //   shape: RoundedRectangleBorder(
-                    //     borderRadius: BorderRadius.circular(15.0),
-                    //     side: BorderSide(color: Colors.blueAccent),
-                    //   ),
-                    //   shadowColor: Colors.blue,
-                    //   child: Padding(
-                    //     padding: const EdgeInsets.all(15.0),
-                    //     child: Column(
-                    //       crossAxisAlignment: CrossAxisAlignment.start,
-                    //       children: [
-                    //         Image.asset(
-                    //           "flutter.png", 
-                    //           height: 200,
-                    //           width: 200,
-                    //         ),
-                    //         SizedBox(height: 10,),
-                    //         Sans("Flutter", 20)
-                    //       ]
-                    //     ),
-                    //   ),
-                    // ),
-                    // Card(
-                    //   elevation: 30.0,
-                    //   shape: RoundedRectangleBorder(
-                    //     borderRadius: BorderRadius.circular(15.0),
-                    //     side: BorderSide(color: Colors.blueAccent),
-                    //   ),
-                    //   shadowColor: Colors.blue,
-                    //   child: Padding(
-                    //     padding: const EdgeInsets.all(15.0),
-                    //     child: Column(
-                    //       crossAxisAlignment: CrossAxisAlignment.start,
-                    //       children: [
-                    //         Image.asset(
-                    //           "firebase.png", 
-                    //           height: 200,
-                    //           width: 200,
-                    //         ),
-                    //         SizedBox(height: 10,),
-                    //         Sans("Firebase", 20)
-                    //       ]
-                    //     ),
-                    //   ),
-                    // ),
                     AnimatedCardWeb(imagePath: "firebase.png", text: "Firebase"),
                     AnimatedCardWeb(imagePath: "flutter.png", text: "Flutter", fit: BoxFit.contain, reverese: true,),
                     AnimatedCardWeb(imagePath: "java.png", text: "Java"),
@@ -352,5 +298,4 @@ class _LandingPageWebState extends State<LandingPageWeb> {
       ),
     );
   }
-  
 }
