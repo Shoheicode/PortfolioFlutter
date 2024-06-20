@@ -32,6 +32,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
 
     // TODO: implement build
     return Scaffold(
+      extendBodyBehindAppBar: true,
       drawer:Drawer(
         backgroundColor: Colors.white,
         child: Column(
@@ -166,57 +167,13 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                     SizedBox(height:10),
                     Row(
                       children: [
-                        Container(
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                              color: Colors.blue,
-                              style:BorderStyle.solid,
-                              width: 2.0
-                            ),
-                            borderRadius: BorderRadius.circular(5)
-                          ),
-                          padding: EdgeInsets.all(10.0),
-                          child: Text("Flutter")
-                        ),
+                        BlueContainer(text: "Flutter"),
                         SizedBox(width: 10,),
-                        Container(
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                              color: Colors.blue,
-                              style:BorderStyle.solid,
-                              width: 2.0
-                            ),
-                            borderRadius: BorderRadius.circular(5)
-                          ),
-                          padding: EdgeInsets.all(10.0),
-                          child: Text("C++")
-                        ),
+                        BlueContainer(text: "C++"),
                         SizedBox(width: 10,),
-                        Container(
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                              color: Colors.blue,
-                              style:BorderStyle.solid,
-                              width: 2.0
-                            ),
-                            borderRadius: BorderRadius.circular(5)
-                          ),
-                          padding: EdgeInsets.all(10.0),
-                          child: Text("Java")
-                        ),
+                        BlueContainer(text: "Java"),
                         SizedBox(width: 10,),
-                        Container(
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                              color: Colors.blue,
-                              style:BorderStyle.solid,
-                              width: 2.0
-                            ),
-                            borderRadius: BorderRadius.circular(5)
-                          ),
-                          padding: EdgeInsets.all(10.0),
-                          child: Text("Robotics")
-                        ),
+                        BlueContainer(text: "Robotics"),
                         SizedBox(width: 10,),
                       ],
                     )
