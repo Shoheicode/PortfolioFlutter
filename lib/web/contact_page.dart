@@ -60,31 +60,6 @@ class _ContactState extends State<ContactWeb> {
         ),
       ),
       backgroundColor: Colors.white,
-      // appBar: AppBar(
-      //   backgroundColor: Colors.white,
-      //   elevation: 0.0,
-      //   //Getting the Theme and setting how the default settings of webpage.
-      //   iconTheme: IconThemeData(
-      //     size: 25.0,
-      //     color: Colors.black
-      //   ),
-      //   //Sections of the App Bar
-      //   title: Row(
-      //     mainAxisAlignment: MainAxisAlignment.spaceAround,
-      //       children: [
-      //         Spacer(flex: 3,),
-      //         TabsWeb("Home"),
-      //         Spacer(),
-      //         TabsWeb("Projects"),
-      //         Spacer(),
-      //         TabsWeb("Blog"),
-      //         Spacer(),
-      //         TabsWeb("About"),
-      //         Spacer(),
-      //         TabsWeb("Contact")
-      //       ]
-      //     ),
-      // ),
       //The Main body of the web application
       body: NestedScrollView(
         headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled){
