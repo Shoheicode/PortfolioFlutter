@@ -5,7 +5,8 @@ import 'package:portfolio/web/about_page.dart';
 
 class TabsWeb extends StatefulWidget{
   final title;
-  const TabsWeb(this.title, {super.key});
+  final color;
+  const TabsWeb(this.title, {super.key, this.color});
 
   @override
   State<StatefulWidget> createState() =>_TabsWebState();
@@ -23,7 +24,9 @@ class _TabsWebState extends State<TabsWeb>{
         if(widget.title == "Home"){
           Navigator.of(context).pushNamed('/');
         }
-        Navigator.of(context).pushNamed('/' + widget.title);
+        else{
+          Navigator.of(context).pushNamed('/' + widget.title);
+        }
       },
       child: MouseRegion(
         onEnter: (e){
@@ -40,7 +43,8 @@ class _TabsWebState extends State<TabsWeb>{
           duration: const Duration(milliseconds: 100),
           curve: Curves.fastEaseInToSlowEaseOut,
           style: isSelected ? GoogleFonts.oswald(
-            shadows: [Shadow(color:Colors.black, offset: Offset(0, -10,), )],
+            shadows: [
+              Shadow(color: widget.color == null ? Colors.black : widget.color, offset: Offset(0, -10,), )],
               color:Colors.transparent,
               fontSize: 25.0,
               decoration: TextDecoration.underline,
@@ -48,7 +52,7 @@ class _TabsWebState extends State<TabsWeb>{
               decorationColor: Colors.blue,
             ) : 
             GoogleFonts.oswald(
-              color:Colors.black,
+              color:widget.color == null ? Colors.black : widget.color,
               fontSize: 23.0
             ),
           child: Text(widget.title),
@@ -216,4 +220,115 @@ class _AnimatedCardWebState extends State<AnimatedCardWeb> with SingleTickerProv
     );
   }
 
+}
+
+class AnimatedCard extends StatefulWidget{
+  final imagePath;
+  final fit;
+  final reverese;
+  final width;
+  final height;
+  const AnimatedCard({super.key,  @required this.imagePath, this.fit, this.reverese, @required this.width, @required this.height});
+
+  @override
+  State<StatefulWidget> createState() =>_AnimatedCardState();
+
+}
+
+class _AnimatedCardState extends State<AnimatedCard> with SingleTickerProviderStateMixin{
+
+  //Controlling the animations and how long the animations take
+  late AnimationController _controller = AnimationController(
+    vsync: this,
+    duration: const Duration(seconds: 4),
+  )..repeat(reverse: true);
+
+  //Added the animation of for the animation controller to use
+  late Animation<Offset> _animation = Tween(
+    begin: widget.reverese == true ? Offset(0, 0.08) : Offset.zero,
+    end: widget.reverese == true ? Offset.zero : Offset(0, 0.08), 
+  ).animate(_controller);
+
+  @override
+  void dispose(){
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return SlideTransition(
+      position: _animation,
+      child: Card(
+              
+              elevation: 30.0,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15.0),
+                side: BorderSide(color: Colors.blueAccent),
+              ),
+              shadowColor: Colors.blue,
+              child: Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Image.asset(
+                      widget.imagePath, 
+                      height: widget.height,
+                      width: widget.width,
+                      fit: widget.fit == null ? null : widget.fit,
+                    ),
+                  ]
+                ),
+              ),
+            ),
+    );
+  }
+
+}
+
+class BlueContainer extends StatelessWidget{
+  final text;
+  const BlueContainer({super.key, @required this.text});
+  
+  @override
+  Widget build(Object context) {
+    // TODO: implement build
+    return Container(
+      decoration: BoxDecoration(
+        border: Border.all(
+          color: Colors.blue,
+          style:BorderStyle.solid,
+          width: 2.0
+        ),
+        borderRadius: BorderRadius.circular(5)
+      ),
+      padding: EdgeInsets.all(10.0),
+      child: Text(this.text)
+    );
+  }
+  
+}
+
+class AbelText extends StatelessWidget{
+  final text;
+  final size;
+  final color;
+  final fontWeight;
+  
+  AbelText({super.key, @required this.text, @required this.size, this.color, this.fontWeight});
+  
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Text(
+      text,
+      style: GoogleFonts.abel(
+        fontSize: size,
+        color: color == null ? Colors.black : color,
+        fontWeight: fontWeight == null ? FontWeight.normal : fontWeight,
+      ),
+    );
+  }
 }
