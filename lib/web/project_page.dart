@@ -61,93 +61,70 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
         ),
       ),
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0.0,
-        //Getting the Theme and setting how the default settings of webpage.
-        iconTheme: IconThemeData(
-          size: 25.0,
-          color: Colors.black
-        ),
-        //Sections of the App Bar
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Spacer(flex: 3,),
-              TabsWeb("Home"),
-              Spacer(),
-              TabsWeb("Projects"),
-              Spacer(),
-              TabsWeb("Blog"),
-              Spacer(),
-              TabsWeb("About"),
-              Spacer(),
-              TabsWeb("Contact")
-            ]
-          ),
-      ),
       //The Main body of the web application
-      body: ListView(
-        children:[
-          //First Container with the introduction
-          Container(
-          height: heightDevice-56,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
+      body: NestedScrollView(
+        headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled){
+          return <Widget>[
+            SliverAppBar(
+              expandedHeight: 800.0,
+              backgroundColor: Colors.white,
+              iconTheme: IconThemeData(
+                size: 25.0,
+                color: Colors.black,
+                
+              ),
+              flexibleSpace: FlexibleSpaceBar(
+                centerTitle: true,
+                title: Container(
+                  decoration: BoxDecoration(
+                    color:Colors.black,
+                    borderRadius: BorderRadius.circular(3.0),
+                  ),
+                  padding: EdgeInsets.symmetric(horizontal: 10.0),
+                  child: AbelText(
+                    text: "Welcome to my blog", 
+                    size: 60.0,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ), 
+                  
+                ),
+                
+                background: Image.asset("project.png", filterQuality: FilterQuality.high, fit: BoxFit.cover,),
+                
+              ),
+              title: Row(
                 children: [
-                  Container(
-                    decoration: BoxDecoration(
-                        color:Colors.blue,
-                        borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(20.0),
-                          topRight: Radius.circular(20.0),
-                          bottomRight: Radius.circular(20.0),
-
-                        )
-                    ),
-                    padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-                    child: SansBold("Hello, I'm", 50),
-                  ),
-                  SizedBox(height: 15,),
-                  SansBold("John Jeffery", 100.0),
-                  Sans("Software Developer", 50),
-                  SizedBox(height:15.0),
-                  Row(
-                    children: [
-                      Icon(Icons.email),
-                      SizedBox(width: 20,),
-                      Sans("jsirie10@gmail.com", 15),
-
-                    ],
-                  ),
+                  Spacer(flex: 3,),
+                  TabsWeb("Home", color: Colors.white,),
+                  Spacer(),
+                  TabsWeb("Projects", color: Colors.white,),
+                  Spacer(),
+                  TabsWeb("Blog", color: Colors.white,),
+                  Spacer(),
+                  TabsWeb("About", color: Colors.white,),
+                  Spacer(),
+                  TabsWeb("Contact", color: Colors.white,)
                 ],
               ),
-              CircleAvatar(
-                    //Creates the circle avatar and the outer blue circle
-                    radius:187.0,
-                    backgroundColor: Colors.blue,
-                    child: CircleAvatar(
-                      //Inner black circle
-                      radius:183,
-                      backgroundColor: Colors.black,
-                      child: CircleAvatar(
-                        //Image of the avatar
-                        radius:180,
-                        backgroundColor: Colors.white,
-                        backgroundImage: AssetImage("J.png"),
-                      ),
-                    ),
-                  ),
-            ],
-          ),
+            )
+          ];
+        },
+        body: ListView(
+          children: [
+            Column(
+              children: [
+                SizedBox(height: 30.0),
+                SansBold("Works", 40.0),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [],
+                )
+              ],
+            )
+          ],
         ),
-          SizedBox(height: 10.0,)
-        ]
-      ),
+      )
     );
   }
 }
