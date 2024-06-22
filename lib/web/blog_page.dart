@@ -1,4 +1,6 @@
 
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -132,6 +134,10 @@ class BlogPost extends StatefulWidget{
 }
 
 class _BlogPostState extends State<BlogPost>{
+  void article() async{
+    await FirebaseFirestore.instance.collection("articles").get().then((value)=> null);
+    
+  }
   bool expand = false;
 
   @override
