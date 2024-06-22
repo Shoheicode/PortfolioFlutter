@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/components.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -131,19 +132,27 @@ class BlogPost extends StatefulWidget{
 }
 
 class _BlogPostState extends State<BlogPost>{
-  bool expanded = false;
+  bool expand = false;
 
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Padding(
-      padding: const EdgeInsets.only(left: 20.0, right: 20.0, top: 30.0),
+      padding: const EdgeInsets.only(left: 70.0, right: 70.0, top: 80.0),
       child: Container(
+        padding: EdgeInsets.all(10.0),
+        decoration: BoxDecoration(
+          border: Border.all(
+            style: BorderStyle.solid,
+            width: 1.0,
+            color: Colors.black
+          )
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: 5.0),
@@ -160,12 +169,22 @@ class _BlogPostState extends State<BlogPost>{
                 IconButton(
                     icon: Icon(Icons.arrow_drop_down_circle_outlined),
                     onPressed: (){
-                      expanded = !expanded;
+                      //Need the set state to change/update the state of the widget like boolens and stuff like that. 
+                      setState((){
+                        expand = !expand;
+                        print(expand);
+                      });
                     },
                     color: Colors.black,
                 ),
               ],
-            )
+            ),
+            SizedBox(height: 7.0,),
+            Text("As soon as Shams Zakhour started working as a Dart writer at Google in December 2013, she started advocating for a Dart mascot. After documenting Java for 14 years, she had observed how beloved the Java mascot, Duke, had become, and she wanted something similar for Dart. But the idea didn't gain momentum until 2017, when one of the Flutter engineers, Nina Chen, suggested it on an internal mailing list. The Flutter VP at the time, Joshy Joseph, approved the idea and asked the organizer for the 2018 Dart Conference, Linda Rasmussen, to make it happen. Once Shams heard about these plans, she rushed to Linda and asked to own and drive the project to produce the plushies for the conference. Linda had already elicited some design sketches, which she handed off. Starting with the sketches, Shams located a vendor who could work within an aggressive deadline (competing with Lunar New Year), and started the process of creating the specs for the plushy. That's right, Dash was originally a Dart mascot, not a Flutter mascot.",
+              style: GoogleFonts.openSans(fontSize: 20.0,),
+              maxLines: expand == true ? null : 3,
+              overflow: expand == true ? TextOverflow.visible : TextOverflow.ellipsis,
+            ),
           ]
         ),
       ),
