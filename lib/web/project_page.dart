@@ -96,15 +96,15 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
               title: Row(
                 children: [
                   Spacer(flex: 3,),
-                  TabsWeb("Home", color: Colors.white,),
+                  TabsWeb("Home", color: Colors.black,),
                   Spacer(),
-                  TabsWeb("Projects", color: Colors.white,),
+                  TabsWeb("Projects", color: Colors.black,),
                   Spacer(),
-                  TabsWeb("Blog", color: Colors.white,),
+                  TabsWeb("Blog", color: Colors.black,),
                   Spacer(),
-                  TabsWeb("About", color: Colors.white,),
+                  TabsWeb("About", color: Colors.black,),
                   Spacer(),
-                  TabsWeb("Contact", color: Colors.white,)
+                  TabsWeb("Contact", color: Colors.black,)
                 ],
               ),
             )
@@ -118,7 +118,23 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
                 SansBold("Works", 40.0),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [],
+                  children: [
+                    AnimatedCard(imagePath: "Iceman.png", width: 500, height: 500),
+                    Column(
+                      children: [
+                        SansBold("IceMan Project", 40.0),
+                        SizedBox(height: 15.0,),
+                        Sans("This project focuses on the using C++ to create a game", 30.0),
+                        SizedBox(height:15.0),
+                        IconButton(
+                          icon: SvgPicture.asset("github.svg", color: Colors.black, width: 35.0),
+                          onPressed: () async {
+                            await launchUrl(Uri.parse("https://github.com/Shoheicode/CS30-ICEMAN"));
+                          },
+                        ),
+                      ],
+                    )
+                  ],
                 )
               ],
             )
