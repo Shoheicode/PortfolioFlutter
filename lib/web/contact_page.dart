@@ -23,6 +23,14 @@ class _ContactState extends State<ContactWeb> {
     );
   }
   
+  final TextEditingController _firstNameController = TextEditingController();
+  final TextEditingController _lastNameController = TextEditingController();
+  final TextEditingController _emailNameController = TextEditingController();
+  final TextEditingController _phoneNameController = TextEditingController();
+  final TextEditingController _messageNameController = TextEditingController();
+  
+  final formKey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     //Gets the height of the device being used
@@ -74,7 +82,7 @@ class _ContactState extends State<ContactWeb> {
               ),
               flexibleSpace: FlexibleSpaceBar(
                 background: Image.asset(
-                  "phone.jpg",
+                  "assets/phone.jpg",
                   fit: BoxFit.cover,
                 ),
               ),
@@ -137,9 +145,26 @@ class _ContactState extends State<ContactWeb> {
                   minWidth: 200.0,
                   color:Colors.blueAccent,
                   child:SansBold("Submit", 20.0),
-                  onPressed: (){
+                  onPressed: () async{
+                      //logger.d(_firstNameController.text);
+                      final sendingData = AddDataFireStore();
+                      if(formKey.currentState!.validate()){
+                        if(await sendingData.addResponse(
+                          _firstNameController.text, 
+                          _lastNameController.text, 
+                          _emailNameController.text, 
+                          _phoneNameController.text, 
+                          _messageNameController.text
+                          )){
+                            formKey.currentState!.reset();
+                            DialogError(context, "Message sent");
+                          }
+                          else{
+                            DialogError(context, "Message not set");
+                          }
+                      }
 
-                  }
+                    }
                 )
             ],
           ),

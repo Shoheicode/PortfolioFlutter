@@ -73,7 +73,7 @@ class _BlogPage extends State<BlogPage>{
             CircleAvatar(
               radius: 70,
               backgroundColor: Colors.white,
-              backgroundImage: AssetImage("J.png"),
+              backgroundImage: AssetImage("assets/J.png"),
             ),
             SizedBox(height: 15,),
             SansBold("Jason Irie", 30),
@@ -81,9 +81,9 @@ class _BlogPage extends State<BlogPage>{
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                urlLauncher("linkedin.png", "https://www.linkedin.com/in/jason-irie-2bb2b0243/"),
+                urlLauncher("assets/linkedin.png", "https://www.linkedin.com/in/jason-irie-2bb2b0243/"),
                 IconButton(
-                  icon: SvgPicture.asset("github.svg", color: Colors.black, width: 35.0),
+                  icon: SvgPicture.asset("assets/github.svg", color: Colors.black, width: 35.0),
                   onPressed: () async {
                     await launchUrl(Uri.parse("https://github.com/Shoheicode"));
                   },
@@ -123,7 +123,7 @@ class _BlogPage extends State<BlogPage>{
                   
                 ),
                 
-                background: Image.asset("blog.jpg", filterQuality: FilterQuality.high, fit: BoxFit.cover,),
+                background: Image.asset("assets/blog.jpg", filterQuality: FilterQuality.high, fit: BoxFit.cover,),
                 
               ),
               title: Row(

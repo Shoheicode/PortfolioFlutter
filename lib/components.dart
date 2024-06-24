@@ -347,7 +347,7 @@ class AddDataFireStore{
 var logger = Logger();
   CollectionReference response = FirebaseFirestore.instance.collection("message");
 
-  Future<void> addResponse(final firstName, final lastName, final email, final phoneNumber, message) async{
+  Future<bool> addResponse(final firstName, final lastName, final email, final phoneNumber, message) async{
     return response.add(
       {
         'first name': firstName,
@@ -356,6 +356,21 @@ var logger = Logger();
         'phone number': phoneNumber,
         'message': message,
       }
-    ).then((value) => logger.d("Success")).catchError((error) => logger.d(error));
+    ).then((value) {
+      return true;
+    }).catchError((error) {
+      logger.d(error);
+      return false;
+    });
   }
+}
+
+Future DialogError(BuildContext context, String title){
+  return showDialog(context: context, builder: (BuildContext contexct)=> AlertDialog(
+      title: SansBold(title, 30),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10.0)
+      ),
+    )
+  );
 }

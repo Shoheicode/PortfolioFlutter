@@ -52,7 +52,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
             CircleAvatar(
               radius: 70,
               backgroundColor: Colors.white,
-              backgroundImage: AssetImage("J.png"),
+              backgroundImage: AssetImage("assets/J.png"),
             ),
             SizedBox(height: 15,),
             SansBold("Jason Irie", 30),
@@ -60,9 +60,9 @@ class _LandingPageWebState extends State<LandingPageWeb> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                urlLauncher("linkedin.png", "https://www.linkedin.com/in/jason-irie-2bb2b0243/"),
+                urlLauncher("assets/linkedin.png", "https://www.linkedin.com/in/jason-irie-2bb2b0243/"),
                 IconButton(
-                  icon: SvgPicture.asset("github.svg", color: Colors.black, width: 35.0),
+                  icon: SvgPicture.asset("assets/github.svg", color: Colors.black, width: 35.0),
                   onPressed: () async {
                     await launchUrl(Uri.parse("https://github.com/Shoheicode"));
                   },
@@ -150,7 +150,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                         //Image of the avatar
                         radius:180,
                         backgroundColor: Colors.white,
-                        backgroundImage: AssetImage("J.png"),
+                        backgroundImage: AssetImage("assets/J.png"),
                       ),
                     ),
                   ),
@@ -164,7 +164,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Image.asset("web.png", height: heightDevice/2.0),
+                Image.asset("assets/web.png", height: heightDevice/2.0),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -203,10 +203,10 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    AnimatedCardWeb(imagePath: "firebase.png", text: "Firebase"),
-                    AnimatedCardWeb(imagePath: "flutter.png", text: "Flutter", fit: BoxFit.contain, reverese: true,),
-                    AnimatedCardWeb(imagePath: "java.png", text: "Java"),
-                    AnimatedCardWeb(imagePath: "cpp.png", text: "C++", reverese: true,)
+                    AnimatedCardWeb(imagePath: "assets/firebase.png", text: "Firebase"),
+                    AnimatedCardWeb(imagePath: "assets/flutter.png", text: "Flutter", fit: BoxFit.contain, reverese: true,),
+                    AnimatedCardWeb(imagePath: "assets/java.png", text: "Java"),
+                    AnimatedCardWeb(imagePath: "assets/cpp.png", text: "C++", reverese: true,)
                   ],
                 )
               ],
@@ -288,18 +288,19 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                       //logger.d(_firstNameController.text);
                       final sendingData = AddDataFireStore();
                       if(formKey.currentState!.validate()){
-                        await sendingData.addResponse(
+                        if (await sendingData.addResponse(
                           _firstNameController.text, 
                           _lastNameController.text, 
                           _emailNameController.text, 
                           _phoneNameController.text, 
                           _messageNameController.text
-                          );
-                        formKey.currentState!.reset();
-                        showDialog(context: context, builder: (BuildContext contexct)=> AlertDialog(
-                            title: SansBold("Message Submitted", 30),
-                          )
-                        );
+                          )){
+                            formKey.currentState!.reset();
+                            DialogError(context, "Message sent");
+                          }
+                          else{
+                            DialogError(context, "Message was not sent");
+                          }
                       }
 
                     }

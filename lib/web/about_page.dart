@@ -40,7 +40,7 @@ class _AboutState extends State<AboutWeb> {
           CircleAvatar(
             radius: 70,
             backgroundColor: Colors.white,
-            backgroundImage: AssetImage("J.png"),
+            backgroundImage: AssetImage("assets/J.png"),
           ),
           SizedBox(height: 15,),
           SansBold("Jason Irie", 30),
@@ -48,9 +48,9 @@ class _AboutState extends State<AboutWeb> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              urlLauncher("linkedin.png", "https://www.linkedin.com/in/jason-irie-2bb2b0243/"),
+              urlLauncher("assets/linkedin.png", "https://www.linkedin.com/in/jason-irie-2bb2b0243/"),
               IconButton(
-                icon: SvgPicture.asset("github.svg", color: Colors.black, width: 35.0),
+                icon: SvgPicture.asset("assets/github.svg", color: Colors.black, width: 35.0),
                 onPressed: () async {
                   await launchUrl(Uri.parse("https://github.com/Shoheicode"));
                 },
@@ -127,7 +127,7 @@ class _AboutState extends State<AboutWeb> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            AnimatedCard(imagePath: "cpp.png", width: 300, height: 300),
+            AnimatedCard(imagePath: "assets/cpp.png", width: 300, height: 300),
             SizedBox(
               height: heightDevice/3,
               child: Column(
@@ -157,8 +157,8 @@ class _AboutState extends State<AboutWeb> {
                 ]
               ),
             ),
-            AnimatedCard(imagePath: "flutter.png", width: 300, height: 300, reverese: true,),
-            AnimatedCard(imagePath: "firebase.png", width: 300 , height: 300)
+            AnimatedCard(imagePath: "assets/flutter.png", width: 300, height: 300, reverese: true,),
+            AnimatedCard(imagePath: "assets/firebase.png", width: 300 , height: 300)
 
             
           ],
@@ -167,7 +167,7 @@ class _AboutState extends State<AboutWeb> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            AnimatedCard(imagePath: "java.png", width: 300, height: 300),
+            AnimatedCard(imagePath: "assets/sjava.png", width: 300, height: 300),
             SizedBox(
               height: heightDevice/3,
               child: Column(

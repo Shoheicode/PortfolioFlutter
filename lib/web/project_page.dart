@@ -40,7 +40,7 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
             CircleAvatar(
               radius: 70,
               backgroundColor: Colors.white,
-              backgroundImage: AssetImage("J.png"),
+              backgroundImage: AssetImage("assets/J.png"),
             ),
             SizedBox(height: 15,),
             SansBold("Jason Irie", 30),
@@ -50,7 +50,7 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
               children: [
                 urlLauncher("linkedin.png", "https://www.linkedin.com/in/jason-irie-2bb2b0243/"),
                 IconButton(
-                  icon: SvgPicture.asset("github.svg", color: Colors.black, width: 35.0),
+                  icon: SvgPicture.asset("assets/github.svg", color: Colors.black, width: 35.0),
                   onPressed: () async {
                     await launchUrl(Uri.parse("https://github.com/Shoheicode"));
                   },
@@ -90,7 +90,7 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
                   
                 ),
                 
-                background: Image.asset("project.png", filterQuality: FilterQuality.high, fit: BoxFit.cover,),
+                background: Image.asset("assets/project.png", filterQuality: FilterQuality.high, fit: BoxFit.cover,),
                 
               ),
               title: Row(
@@ -119,7 +119,7 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    AnimatedCard(imagePath: "Iceman.png", width: 500, height: 500),
+                    AnimatedCard(imagePath: "assets/Iceman.png", width: 500, height: 500),
                     Column(
                       children: [
                         SansBold("IceMan Project", 40.0),
@@ -127,7 +127,7 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
                         Sans("This project focuses on the using C++ to create a game", 30.0),
                         SizedBox(height:15.0),
                         IconButton(
-                          icon: SvgPicture.asset("github.svg", color: Colors.black, width: 35.0),
+                          icon: SvgPicture.asset("assets/github.svg", color: Colors.black, width: 35.0),
                           onPressed: () async {
                             await launchUrl(Uri.parse("https://github.com/Shoheicode/CS30-ICEMAN"));
                           },
