@@ -1,6 +1,8 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:logger/logger.dart';
 import 'package:portfolio/web/about_page.dart';
 
 class TabsWeb extends StatefulWidget{
@@ -105,8 +107,10 @@ class TextForm extends StatelessWidget{
   final width;
   final hintText;
   final maxLine;
+  final controller;
+  final validator;
 
-  const TextForm({super.key,@required this.heading, @required this.width, @required this.hintText, this.maxLine});
+  const TextForm({super.key,@required this.heading, @required this.width, @required this.hintText, this.maxLine, this.controller, this.validator});
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -119,6 +123,8 @@ class TextForm extends StatelessWidget{
                   width: width,
                   
                   child: TextFormField(
+                    validator: validator,
+                    controller: controller,
                     //RegExp('[a-z]'), only included the lower case letters, no upper case
                     // inputFormatters: [
                     //   FilteringTextInputFormatter.allow(RegExp('[a-zA-Zs]'))
@@ -126,9 +132,13 @@ class TextForm extends StatelessWidget{
                     maxLines: maxLine == null ? null: maxLine,
                     //How to add decoration around the text form field
                     decoration: InputDecoration(
+                      errorBorder: const OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.red),
+                        borderRadius: BorderRadius.all(Radius.circular(15.0))
+                      ),
                       focusedErrorBorder: const OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.red),
-                        borderRadius: BorderRadius.all(Radius.circular(10.0))
+                        borderRadius: BorderRadius.all(Radius.circular(15.0))
                       ),
                       enabledBorder: const OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.blue),
@@ -330,5 +340,22 @@ class AbelText extends StatelessWidget{
         fontWeight: fontWeight == null ? FontWeight.normal : fontWeight,
       ),
     );
+  }
+}
+
+class AddDataFireStore{
+var logger = Logger();
+  CollectionReference response = FirebaseFirestore.instance.collection("message");
+
+  Future<void> addResponse(final firstName, final lastName, final email, final phoneNumber, message) async{
+    return response.add(
+      {
+        'first name': firstName,
+        'last name': lastName,
+        'email': email,
+        'phone number': phoneNumber,
+        'message': message,
+      }
+    ).then((value) => logger.d("Success")).catchError((error) => logger.d(error));
   }
 }
