@@ -82,7 +82,7 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
                   ),
                   padding: EdgeInsets.symmetric(horizontal: 10.0),
                   child: AbelText(
-                    text: "Welcome to my blog", 
+                    text: "Projects", 
                     size: 60.0,
                     color: Colors.white,
                     fontWeight: FontWeight.bold,

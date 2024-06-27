@@ -134,7 +134,7 @@ class _AboutState extends State<AboutWeb> {
                 children: [
                   SansBold("C++",  40),
                   SizedBox(height: 10,),
-                  Sans("Do you need help creating an application in C++? I can help you work on it.", 20)
+                  Sans("Do you need help creating an application in C++? I have made many projects using C++", 20)
                 ]
               ),
             )
@@ -153,7 +153,7 @@ class _AboutState extends State<AboutWeb> {
                 children: [
                   SansBold("Flutter and Firebase",  40),
                   SizedBox(height: 10,),
-                  Sans("Do you need help creating a web application or app? I know my way using Flutter and Firebase.", 20)
+                  Sans("Do you need help creating a web application or app? I know my way using Flutter and Firebase and competed in the Google Solution Challenge.", 20)
                 ]
               ),
             ),
@@ -167,14 +167,14 @@ class _AboutState extends State<AboutWeb> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            AnimatedCard(imagePath: "assets/sjava.png", width: 300, height: 300),
+            AnimatedCard(imagePath: "assets/java.png", width: 300, height: 300),
             SizedBox(
               height: heightDevice/3,
               child: Column(
                 children: [
-                  SansBold("JAVA",  40),
+                  SansBold("Java",  40),
                   SizedBox(height: 10,),
-                  Sans("Do you need help creating an application using Java? That's my cup of joe.", 20)
+                  Sans("Do you need help creating an application using Java? That's my cup of joe (joke). I have coded many things from Robots to games of Tic-Tac-Toe.", 20)
                 ]
               ),
             ),
