@@ -348,6 +348,7 @@ var logger = Logger();
   CollectionReference response = FirebaseFirestore.instance.collection("message");
 
   Future<bool> addResponse(final firstName, final lastName, final email, final phoneNumber, message) async{
+    logger.d("dlajfsdljfklajl");
     return response.add(
       {
         'first name': firstName,
@@ -359,6 +360,7 @@ var logger = Logger();
     ).then((value) {
       return true;
     }).catchError((error) {
+      logger.d("I AM RUNNING");
       logger.d(error);
       return false;
     });
