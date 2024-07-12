@@ -135,7 +135,27 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
                       ],
                     )
                   ],
-                )
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Column(
+                      children: [
+                        SansBold("TransferWise Project", 40.0),
+                        SizedBox(height: 15.0,),
+                        Sans("This project focused on assisting students in the transfer process and helping them find courses at colleges near them that can help them transfer. It used Flutter, Firebase, and Google API's and was submitted in the 2023 Google Solution Challenge.", 30.0),
+                        SizedBox(height:15.0),
+                        IconButton(
+                          icon: SvgPicture.asset("assets/github.svg", color: Colors.black, width: 35.0),
+                          onPressed: () async {
+                            await launchUrl(Uri.parse("https://github.com/Shoheicode/CS30-ICEMAN"));
+                          },
+                        ),
+                      ],
+                    ),
+                    AnimatedCard(imagePath: "assets/ImageofWebApplication.png", width: 500, height: 500),
+                  ],
+                ),
               ],
             )
           ],
