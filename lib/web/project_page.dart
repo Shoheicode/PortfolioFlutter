@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:go_router/go_router.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/components.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -37,14 +35,14 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            CircleAvatar(
+            const CircleAvatar(
               radius: 70,
               backgroundColor: Colors.white,
               backgroundImage: AssetImage("assets/J.png"),
             ),
-            SizedBox(height: 15,),
-            SansBold("Jason Irie", 30),
-            SizedBox(height: 15.0,),
+            const SizedBox(height: 15,),
+            const SansBold("Jason Irie", 30),
+            const SizedBox(height: 15.0,),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -68,7 +66,7 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
             SliverAppBar(
               expandedHeight: 800.0,
               backgroundColor: Colors.white,
-              iconTheme: IconThemeData(
+              iconTheme: const IconThemeData(
                 size: 25.0,
                 color: Colors.black,
                 
@@ -80,8 +78,8 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
                     color:Colors.black,
                     borderRadius: BorderRadius.circular(3.0),
                   ),
-                  padding: EdgeInsets.symmetric(horizontal: 10.0),
-                  child: AbelText(
+                  padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                  child: const AbelText(
                     text: "Projects", 
                     size: 60.0,
                     color: Colors.white,
@@ -93,7 +91,7 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
                 background: Image.asset("assets/project.png", filterQuality: FilterQuality.high, fit: BoxFit.cover,),
                 
               ),
-              title: Row(
+              title: const Row(
                 children: [
                   Spacer(flex: 3,),
                   TabsWeb("Home", color: Colors.black,),
@@ -114,18 +112,18 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
           children: [
             Column(
               children: [
-                SizedBox(height: 30.0),
-                SansBold("Works", 40.0),
+                const SizedBox(height: 30.0),
+                const SansBold("Works", 40.0),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    AnimatedCard(imagePath: "assets/Iceman.png", width: 500, height: 500),
+                    const AnimatedCard(imagePath: "assets/Iceman.png", width: 500, height: 500),
                     Column(
                       children: [
-                        SansBold("IceMan Project", 40.0),
-                        SizedBox(height: 15.0,),
-                        Sans("This project focuses on the using C++ to create a game", 30.0),
-                        SizedBox(height:15.0),
+                        const SansBold("IceMan Project", 40.0),
+                        const SizedBox(height: 15.0,),
+                        const Sans("This project focuses on the using C++ to create a game", 30.0),
+                        const SizedBox(height:15.0),
                         IconButton(
                           icon: SvgPicture.asset("assets/github.svg", color: Colors.black, width: 35.0),
                           onPressed: () async {
@@ -136,24 +134,32 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
                     )
                   ],
                 ),
+                const SizedBox(height: 100.0,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Column(
                       children: [
-                        SansBold("TransferWise Project", 40.0),
-                        SizedBox(height: 15.0,),
-                        Sans("This project focused on assisting students in the transfer process and helping them find courses at colleges near them that can help them transfer. It used Flutter, Firebase, and Google API's and was submitted in the 2023 Google Solution Challenge.", 30.0),
-                        SizedBox(height:15.0),
+                        const SansBold("TransferWise Project", 40.0),
+                        const SizedBox(height: 15.0,),
+                        const Sans("This project focused on assisting", 30.0),
+                        const Sans("students in the transfer process", 30.0),
+                        const Sans("and helping them find courses at colleges", 30.0),
+                        const Sans("near them that can help", 30.0),
+                        const Sans("them transfer. It used Flutter,", 30.0),
+                        const Sans("Firebase, and Google API's", 30.0), 
+                        const Sans("and was submitted", 30.0),
+                        const Sans("in the 2023 Google Solution Challenge.", 30.0),
+                        const SizedBox(height:15.0),
                         IconButton(
                           icon: SvgPicture.asset("assets/github.svg", color: Colors.black, width: 35.0),
                           onPressed: () async {
-                            await launchUrl(Uri.parse("https://github.com/Shoheicode/CS30-ICEMAN"));
+                            await launchUrl(Uri.parse("https://github.com/El-Camino-Google-Developer-Student-Club/El-Camino-2023-Solution-Challenge"));
                           },
                         ),
                       ],
                     ),
-                    AnimatedCard(imagePath: "assets/ImageofWebApplication.png", width: 500, height: 500),
+                    const AnimatedCard(imagePath: "assets/ImageofWebApplication.png", width: 500, height: 500),
                   ],
                 ),
               ],

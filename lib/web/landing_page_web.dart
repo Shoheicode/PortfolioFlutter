@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:go_router/go_router.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:logger/logger.dart';
 import 'package:portfolio/components.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -49,14 +47,14 @@ class _LandingPageWebState extends State<LandingPageWeb> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            CircleAvatar(
+            const CircleAvatar(
               radius: 70,
               backgroundColor: Colors.white,
               backgroundImage: AssetImage("assets/J.png"),
             ),
-            SizedBox(height: 15,),
-            SansBold("Jason Irie", 30),
-            SizedBox(height: 15.0,),
+            const SizedBox(height: 15,),
+            const SansBold("Jason Irie", 30.0),
+            const SizedBox(height: 15.0,),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -77,12 +75,12 @@ class _LandingPageWebState extends State<LandingPageWeb> {
         backgroundColor: Colors.white,
         elevation: 0.0,
         //Getting the Theme and setting how the default settings of webpage.
-        iconTheme: IconThemeData(
+        iconTheme: const IconThemeData(
           size: 25.0,
           color: Colors.black
         ),
         //Sections of the App Bar
-        title: Row(
+        title: const Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Spacer(flex: 3,),
@@ -102,8 +100,8 @@ class _LandingPageWebState extends State<LandingPageWeb> {
       body: ListView(
         children:[
           //First Container with the introduction
-          Container(
-          height: heightDevice-56,
+          SizedBox(
+          height: heightDevice-56.0,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -112,7 +110,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                         color:Colors.blue,
                         borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(20.0),
@@ -121,24 +119,24 @@ class _LandingPageWebState extends State<LandingPageWeb> {
 
                         )
                     ),
-                    padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-                    child: SansBold("Hello, I'm", 50),
+                    padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                    child: const SansBold("Hello, I'm", 50.0),
                   ),
-                  SizedBox(height: 15,),
-                  SansBold("Jason Irie", 100.0),
-                  Sans("Software Developer", 50),
-                  SizedBox(height:15.0),
-                  Row(
+                  const SizedBox(height: 15,),
+                  const SansBold("Jason Irie", 100.0),
+                  const Sans("Software Developer", 50.0),
+                  const SizedBox(height:15.0),
+                  const Row(
                     children: [
                       Icon(Icons.email),
                       SizedBox(width: 20,),
-                      Sans("jsirie10@gmail.com", 15),
+                      Sans("jsirie10@gmail.com", 15.0),
 
                     ],
                   ),
                 ],
               ),
-              CircleAvatar(
+              const CircleAvatar(
                     //Creates the circle avatar and the outer blue circle
                     radius:187.0,
                     backgroundColor: Colors.blue,
@@ -158,21 +156,21 @@ class _LandingPageWebState extends State<LandingPageWeb> {
           ),
         ),
           //Second Container about me
-          Container(
+          SizedBox(
             height: heightDevice/1.5,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Image.asset("assets/web.png", height: heightDevice/2.0),
-                Column(
+                const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     SansBold("About me", 40.0),
                     SizedBox(height: 15,),
                     Sans("Hello! I'm Jason irie. I specialize in C++ and making applications using C++.", 15.0),
-                    Sans("I strive to ensure my projects and my work is the best to its ability and ", 15),
+                    Sans("I strive to ensure my projects and my work is the best to its ability and ", 15.0),
                     Sans("striving to utilize my abilities to help others. I have created many projects that", 15.0),
                     Sans("demonstrate my understanding and knowledge in C++ and Data Structures and Algorithims", 15.0),
                     SizedBox(height:10),
@@ -194,12 +192,12 @@ class _LandingPageWebState extends State<LandingPageWeb> {
             ),
           ),
           //Third Container with specialties
-          Container(
+          SizedBox(
             height: heightDevice/1.3,
-            child:Column(
+            child:const Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                SansBold("What I do?", 40),
+                SansBold("What I do?", 40.0),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -213,14 +211,14 @@ class _LandingPageWebState extends State<LandingPageWeb> {
             )
           ),
           //Fourth Container for contact information
-          Container(
+          SizedBox(
             height: heightDevice,
             child: Form(
               key:formKey,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  SansBold("Contact Me", 40),
+                  const SansBold("Contact Me", 40.0),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -239,7 +237,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                                 }
                               },
                             ),
-                          SizedBox(height: 15,),
+                          const SizedBox(height: 15,),
                           TextForm(
                             heading: "Email", 
                             width: 350, 
@@ -257,7 +255,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                       Column(
                         children: [
                           TextForm(heading: "Last Name", width: 350, hintText: "Please enter in laster name", controller: _lastNameController,),
-                          SizedBox(height: 15,),
+                          const SizedBox(height: 15,),
                           TextForm(heading: "Phone Number", width: 350, hintText: "Please enter in your phone number", maxLine: 1, controller:  _phoneNameController,)
                         ],
                       )
@@ -283,7 +281,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                     height: 60.0,
                     minWidth: 200.0,
                     color:Colors.blueAccent,
-                    child:SansBold("Submit", 20.0),
+                    child:const SansBold("Submit", 20.0),
                     onPressed: () async{
                       //logger.d(_firstNameController.text);
                       final sendingData = AddDataFireStore();
@@ -309,7 +307,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
               ),
             ),
           ),
-          SizedBox(height: 10.0,)
+          const SizedBox(height: 10.0,)
         ]
       ),
     );

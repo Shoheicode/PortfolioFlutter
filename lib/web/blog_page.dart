@@ -1,7 +1,5 @@
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -70,14 +68,14 @@ class _BlogPage extends State<BlogPage>{
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            CircleAvatar(
+            const CircleAvatar(
               radius: 70,
               backgroundColor: Colors.white,
               backgroundImage: AssetImage("assets/J.png"),
             ),
-            SizedBox(height: 15,),
-            SansBold("Jason Irie", 30),
-            SizedBox(height: 15.0,),
+            const SizedBox(height: 15,),
+            const SansBold("Jason Irie", 30),
+            const SizedBox(height: 15.0,),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -101,7 +99,7 @@ class _BlogPage extends State<BlogPage>{
             SliverAppBar(
               expandedHeight: 800.0,
               backgroundColor: Colors.white,
-              iconTheme: IconThemeData(
+              iconTheme: const IconThemeData(
                 size: 25.0,
                 color: Colors.black,
                 
@@ -113,8 +111,8 @@ class _BlogPage extends State<BlogPage>{
                     color:Colors.black,
                     borderRadius: BorderRadius.circular(3.0),
                   ),
-                  padding: EdgeInsets.symmetric(horizontal: 10.0),
-                  child: AbelText(
+                  padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                  child: const AbelText(
                     text: "Welcome to my blog", 
                     size: 60.0,
                     color: Colors.white,
@@ -126,7 +124,7 @@ class _BlogPage extends State<BlogPage>{
                 background: Image.asset("assets/blog.jpg", filterQuality: FilterQuality.high, fit: BoxFit.cover,),
                 
               ),
-              title: Row(
+              title: const Row(
                 children: [
                   Spacer(flex: 3,),
                   TabsWeb("Home", color: Colors.white,),
@@ -156,7 +154,7 @@ class _BlogPage extends State<BlogPage>{
               );
             }
             else{
-              return Center(
+              return const Center(
                 child: CircularProgressIndicator(),
               );
             }
@@ -189,7 +187,7 @@ class _BlogPostState extends State<BlogPost>{
     return Padding(
       padding: const EdgeInsets.only(left: 70.0, right: 70.0, top: 80.0),
       child: Container(
-        padding: EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(10.0),
         decoration: BoxDecoration(
           border: Border.all(
             style: BorderStyle.solid,
@@ -204,7 +202,7 @@ class _BlogPostState extends State<BlogPost>{
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  padding: EdgeInsets.symmetric(horizontal: 5.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 5.0),
                   decoration: BoxDecoration(
                     color: Colors.black,
                     borderRadius: BorderRadius.circular(3.0)
@@ -216,7 +214,7 @@ class _BlogPostState extends State<BlogPost>{
                   )
                 ),
                 IconButton(
-                    icon: Icon(Icons.arrow_drop_down_circle_outlined),
+                    icon: const Icon(Icons.arrow_drop_down_circle_outlined),
                     onPressed: (){
                       //Need the set state to change/update the state of the widget like boolens and stuff like that. 
                       setState((){
@@ -228,7 +226,7 @@ class _BlogPostState extends State<BlogPost>{
                 ),
               ],
             ),
-            SizedBox(height: 7.0,),
+            const SizedBox(height: 7.0,),
             Text(widget.body.toString(),
               style: GoogleFonts.openSans(fontSize: 20.0,),
               maxLines: expand == true ? null : 3,

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/components.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -37,14 +36,14 @@ class _AboutState extends State<AboutWeb> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          CircleAvatar(
+          const CircleAvatar(
             radius: 70,
             backgroundColor: Colors.white,
             backgroundImage: AssetImage("assets/J.png"),
           ),
-          SizedBox(height: 15,),
-          SansBold("Jason Irie", 30),
-          SizedBox(height: 15.0,),
+          const SizedBox(height: 15,),
+          const SansBold("Jason Irie", 30),
+          const SizedBox(height: 15.0,),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -65,12 +64,12 @@ class _AboutState extends State<AboutWeb> {
       backgroundColor: Colors.white,
       elevation: 0.0,
       //Getting the Theme and setting how the default settings of webpage.
-      iconTheme: IconThemeData(
+      iconTheme: const IconThemeData(
         size: 25.0,
         color: Colors.black
       ),
       //Sections of the App Bar
-      title: Row(
+      title: const Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Spacer(flex: 3,),
@@ -89,7 +88,7 @@ class _AboutState extends State<AboutWeb> {
     //The Main body of the web application
     body: ListView(
       children: [
-        SizedBox(
+        const SizedBox(
           height: 500.0,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -127,10 +126,10 @@ class _AboutState extends State<AboutWeb> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            AnimatedCard(imagePath: "assets/cpp.png", width: 300, height: 300),
+            const AnimatedCard(imagePath: "assets/cpp.png", width: 300, height: 300),
             SizedBox(
               height: heightDevice/3,
-              child: Column(
+              child: const Column(
                 children: [
                   SansBold("C++",  40),
                   SizedBox(height: 10,),
@@ -141,14 +140,14 @@ class _AboutState extends State<AboutWeb> {
             
           ],
         ),
-        SizedBox(height: 100.0,),
+        const SizedBox(height: 100.0,),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             SizedBox(
               height: heightDevice/3,
               width: widthDevice/2,
-              child: Column(
+              child: const Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SansBold("Flutter and Firebase",  40),
@@ -157,20 +156,20 @@ class _AboutState extends State<AboutWeb> {
                 ]
               ),
             ),
-            AnimatedCard(imagePath: "assets/flutter.png", width: 300, height: 300, reverese: true,),
-            AnimatedCard(imagePath: "assets/firebase.png", width: 300 , height: 300)
+            const AnimatedCard(imagePath: "assets/flutter.png", width: 300, height: 300, reverese: true,),
+            const AnimatedCard(imagePath: "assets/firebase.png", width: 300 , height: 300)
 
             
           ],
         ),
-        SizedBox(height: 100.0,),
+        const SizedBox(height: 100.0,),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            AnimatedCard(imagePath: "assets/java.png", width: 300, height: 300),
+            const AnimatedCard(imagePath: "assets/java.png", width: 300, height: 300),
             SizedBox(
               height: heightDevice/3,
-              child: Column(
+              child: const Column(
                 children: [
                   SansBold("Java",  40),
                   SizedBox(height: 10,),
@@ -181,7 +180,7 @@ class _AboutState extends State<AboutWeb> {
             
           ],
         ),
-        SizedBox(height: 100.0,),
+        const SizedBox(height: 100.0,),
 
       ],
       ),

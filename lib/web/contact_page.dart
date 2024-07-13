@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:logger/logger.dart';
 import 'package:portfolio/components.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -29,7 +28,7 @@ class _ContactState extends State<ContactWeb> {
   final TextEditingController _emailNameController = TextEditingController();
   final TextEditingController _phoneNameController = TextEditingController();
   final TextEditingController _messageNameController = TextEditingController();
-  final logger = new Logger();
+  final logger = Logger();
   
   final formKey = GlobalKey<FormState>();
 
@@ -46,14 +45,14 @@ class _ContactState extends State<ContactWeb> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            CircleAvatar(
+            const CircleAvatar(
               radius: 70,
               backgroundColor: Colors.white,
               backgroundImage: AssetImage("J.png"),
             ),
-            SizedBox(height: 15,),
-            SansBold("Jason Irie", 30),
-            SizedBox(height: 15.0,),
+            const SizedBox(height: 15,),
+            const SansBold("Jason Irie", 30),
+            const SizedBox(height: 15.0,),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -77,7 +76,7 @@ class _ContactState extends State<ContactWeb> {
             SliverAppBar(
               expandedHeight: 800.0,
               backgroundColor: Colors.white,
-              iconTheme: IconThemeData(
+              iconTheme: const IconThemeData(
                 size: 25.0,
                 color: Colors.black,
                 
@@ -88,7 +87,7 @@ class _ContactState extends State<ContactWeb> {
                   fit: BoxFit.cover,
                 ),
               ),
-              title: Row(
+              title: const Row(
                 children: [
                   Spacer(flex: 3,),
                   TabsWeb("Home"),
@@ -111,7 +110,7 @@ class _ContactState extends State<ContactWeb> {
             child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    SansBold("Contact Me", 40),
+                    const SansBold("Contact Me", 40),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
@@ -129,7 +128,7 @@ class _ContactState extends State<ContactWeb> {
                                   }
                                 },
                               ),
-                            SizedBox(height: 15,),
+                            const SizedBox(height: 15,),
                             TextForm(
                               heading: "Email", 
                               width: 350, 
@@ -147,7 +146,7 @@ class _ContactState extends State<ContactWeb> {
                         Column(
                           children: [
                             TextForm(heading: "Last Name", width: 350, hintText: "Please enter in laster name", controller: _lastNameController,),
-                            SizedBox(height: 15,),
+                            const SizedBox(height: 15,),
                             TextForm(heading: "Phone Number", width: 350, hintText: "Please enter in your phone number", maxLine: 1, controller:  _phoneNameController,)
                           ],
                         )
@@ -165,7 +164,7 @@ class _ContactState extends State<ContactWeb> {
                         }
                       },
                     ),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     MaterialButton(
                       elevation: 20.0,
                       shape: RoundedRectangleBorder(
@@ -174,7 +173,7 @@ class _ContactState extends State<ContactWeb> {
                       height: 60.0,
                       minWidth: 200.0,
                       color:Colors.blueAccent,
-                      child:SansBold("Submit", 20.0),
+                      child:const SansBold("Submit", 20.0),
                       onPressed: () async{
                         logger.d(_firstNameController.text);
                         final sendingData = AddDataFireStore();

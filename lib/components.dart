@@ -1,9 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:logger/logger.dart';
-import 'package:portfolio/web/about_page.dart';
 
 class TabsWeb extends StatefulWidget{
   final title;
@@ -46,7 +44,7 @@ class _TabsWebState extends State<TabsWeb>{
           curve: Curves.fastEaseInToSlowEaseOut,
           style: isSelected ? GoogleFonts.oswald(
             shadows: [
-              Shadow(color: widget.color == null ? Colors.black : widget.color, offset: Offset(0, -10,), )],
+              Shadow(color: widget.color ?? Colors.black, offset: const Offset(0, -10,), )],
               color:Colors.transparent,
               fontSize: 25.0,
               decoration: TextDecoration.underline,
@@ -54,7 +52,7 @@ class _TabsWebState extends State<TabsWeb>{
               decorationColor: Colors.blue,
             ) : 
             GoogleFonts.oswald(
-              color:widget.color == null ? Colors.black : widget.color,
+              color:widget.color ?? Colors.black,
               fontSize: 23.0
             ),
           child: Text(widget.title),
@@ -118,7 +116,7 @@ class TextForm extends StatelessWidget{
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Sans(heading, 16.0),
-                SizedBox(height: 5.0),
+                const SizedBox(height: 5.0),
                 SizedBox(
                   width: width,
                   
@@ -129,7 +127,7 @@ class TextForm extends StatelessWidget{
                     // inputFormatters: [
                     //   FilteringTextInputFormatter.allow(RegExp('[a-zA-Zs]'))
                     // ], Something that you can implement
-                    maxLines: maxLine == null ? null: maxLine,
+                    maxLines: maxLine,
                     //How to add decoration around the text form field
                     decoration: InputDecoration(
                       errorBorder: const OutlineInputBorder(
@@ -181,15 +179,15 @@ class AnimatedCardWeb extends StatefulWidget{
 class _AnimatedCardWebState extends State<AnimatedCardWeb> with SingleTickerProviderStateMixin{
 
   //Controlling the animations and how long the animations take
-  late AnimationController _controller = AnimationController(
+  late final AnimationController _controller = AnimationController(
     vsync: this,
     duration: const Duration(seconds: 4),
   )..repeat(reverse: true);
 
   //Added the animation of for the animation controller to use
-  late Animation<Offset> _animation = Tween(
-    begin: widget.reverese == true ? Offset(0, 0.08) : Offset.zero,
-    end: widget.reverese == true ? Offset.zero : Offset(0, 0.08), 
+  late final Animation<Offset> _animation = Tween(
+    begin: widget.reverese == true ? const Offset(0, 0.08) : Offset.zero,
+    end: widget.reverese == true ? Offset.zero : const Offset(0, 0.08), 
   ).animate(_controller);
 
   @override
@@ -207,7 +205,7 @@ class _AnimatedCardWebState extends State<AnimatedCardWeb> with SingleTickerProv
               elevation: 30.0,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(15.0),
-                side: BorderSide(color: Colors.blueAccent),
+                side: const BorderSide(color: Colors.blueAccent),
               ),
               shadowColor: Colors.blue,
               child: Padding(
@@ -219,9 +217,9 @@ class _AnimatedCardWebState extends State<AnimatedCardWeb> with SingleTickerProv
                       widget.imagePath, 
                       height: 200,
                       width: 200,
-                      fit: widget.fit == null ? null : widget.fit,
+                      fit: widget.fit,
                     ),
-                    SizedBox(height: 10,),
+                    const SizedBox(height: 10,),
                     Sans(widget.text, 20)
                   ]
                 ),
@@ -248,15 +246,15 @@ class AnimatedCard extends StatefulWidget{
 class _AnimatedCardState extends State<AnimatedCard> with SingleTickerProviderStateMixin{
 
   //Controlling the animations and how long the animations take
-  late AnimationController _controller = AnimationController(
+  late final AnimationController _controller = AnimationController(
     vsync: this,
     duration: const Duration(seconds: 4),
   )..repeat(reverse: true);
 
   //Added the animation of for the animation controller to use
-  late Animation<Offset> _animation = Tween(
-    begin: widget.reverese == true ? Offset(0, 0.08) : Offset.zero,
-    end: widget.reverese == true ? Offset.zero : Offset(0, 0.08), 
+  late final Animation<Offset> _animation = Tween(
+    begin: widget.reverese == true ? const Offset(0, 0.08) : Offset.zero,
+    end: widget.reverese == true ? Offset.zero : const Offset(0, 0.08), 
   ).animate(_controller);
 
   @override
@@ -275,7 +273,7 @@ class _AnimatedCardState extends State<AnimatedCard> with SingleTickerProviderSt
               elevation: 30.0,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(15.0),
-                side: BorderSide(color: Colors.blueAccent),
+                side: const BorderSide(color: Colors.blueAccent),
               ),
               shadowColor: Colors.blue,
               child: Padding(
@@ -287,7 +285,7 @@ class _AnimatedCardState extends State<AnimatedCard> with SingleTickerProviderSt
                       widget.imagePath, 
                       height: widget.height,
                       width: widget.width,
-                      fit: widget.fit == null ? null : widget.fit,
+                      fit: widget.fit,
                     ),
                   ]
                 ),
@@ -314,8 +312,8 @@ class BlueContainer extends StatelessWidget{
         ),
         borderRadius: BorderRadius.circular(5)
       ),
-      padding: EdgeInsets.all(10.0),
-      child: Text(this.text)
+      padding: const EdgeInsets.all(10.0),
+      child: Text(text)
     );
   }
   
@@ -327,7 +325,7 @@ class AbelText extends StatelessWidget{
   final color;
   final fontWeight;
   
-  AbelText({super.key, @required this.text, @required this.size, this.color, this.fontWeight});
+  const AbelText({super.key, @required this.text, @required this.size, this.color, this.fontWeight});
   
   @override
   Widget build(BuildContext context) {
@@ -336,8 +334,8 @@ class AbelText extends StatelessWidget{
       text,
       style: GoogleFonts.abel(
         fontSize: size,
-        color: color == null ? Colors.black : color,
-        fontWeight: fontWeight == null ? FontWeight.normal : fontWeight,
+        color: color ?? Colors.black,
+        fontWeight: fontWeight ?? FontWeight.normal,
       ),
     );
   }

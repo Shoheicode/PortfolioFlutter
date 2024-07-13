@@ -1,6 +1,5 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/firebase_options.dart';
 import 'package:portfolio/web/about_page.dart';
 import 'package:portfolio/web/blog_page.dart';
@@ -28,7 +27,7 @@ class MyApp extends StatelessWidget {
         //'/': (_) => const LandingPageWeb(),
         '/About': (_) => const AboutWeb(),
         '/Projects': (_) => const ProjectPageWeb(),
-        '/Blog': (_) => BlogPage(),
+        '/Blog': (_) => const BlogPage(),
         '/Contact': (_) =>const ContactWeb(),
       },
       //initialRoute: '/',
