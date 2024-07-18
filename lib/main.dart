@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         //'/': (_) => const LandingPageWeb(),
         '/About': (_) => const AboutWeb(),
         '/Projects': (_) => const ProjectPageWeb(),
-        '/Blog': (_) => const BlogPage(),
+        //'/Blog': (_) => const BlogPage(),
         '/Contact': (_) =>const ContactWeb(),
       },
       //initialRoute: '/',

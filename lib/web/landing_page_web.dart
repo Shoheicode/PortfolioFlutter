@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:logger/logger.dart';
 import 'package:portfolio/components.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -47,14 +49,14 @@ class _LandingPageWebState extends State<LandingPageWeb> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const CircleAvatar(
+            CircleAvatar(
               radius: 70,
               backgroundColor: Colors.white,
               backgroundImage: AssetImage("assets/J.png"),
             ),
-            const SizedBox(height: 15,),
-            const SansBold("Jason Irie", 30.0),
-            const SizedBox(height: 15.0,),
+            SizedBox(height: 15,),
+            SansBold("Jason Irie", 30.0),
+            SizedBox(height: 15.0,),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -75,20 +77,20 @@ class _LandingPageWebState extends State<LandingPageWeb> {
         backgroundColor: Colors.white,
         elevation: 0.0,
         //Getting the Theme and setting how the default settings of webpage.
-        iconTheme: const IconThemeData(
+        iconTheme: IconThemeData(
           size: 25.0,
           color: Colors.black
         ),
         //Sections of the App Bar
-        title: const Row(
+        title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Spacer(flex: 3,),
               TabsWeb("Home"),
               Spacer(),
               TabsWeb("Projects"),
-              Spacer(),
-              TabsWeb("Blog"),
+              // Spacer(),
+              // TabsWeb("Blog"),
               Spacer(),
               TabsWeb("About"),
               Spacer(),
@@ -100,7 +102,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
       body: ListView(
         children:[
           //First Container with the introduction
-          SizedBox(
+          Container(
           height: heightDevice-56.0,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -110,7 +112,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    decoration: const BoxDecoration(
+                    decoration: BoxDecoration(
                         color:Colors.blue,
                         borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(20.0),
@@ -119,14 +121,14 @@ class _LandingPageWebState extends State<LandingPageWeb> {
 
                         )
                     ),
-                    padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-                    child: const SansBold("Hello, I'm", 50.0),
+                    padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                    child: SansBold("Hello, I'm", 50.0),
                   ),
-                  const SizedBox(height: 15,),
-                  const SansBold("Jason Irie", 100.0),
-                  const Sans("Software Developer", 50.0),
-                  const SizedBox(height:15.0),
-                  const Row(
+                  SizedBox(height: 15,),
+                  SansBold("Jason Irie", 100.0),
+                  Sans("Software Developer", 50.0),
+                  SizedBox(height:15.0),
+                  Row(
                     children: [
                       Icon(Icons.email),
                       SizedBox(width: 20,),
@@ -136,7 +138,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                   ),
                 ],
               ),
-              const CircleAvatar(
+              CircleAvatar(
                     //Creates the circle avatar and the outer blue circle
                     radius:187.0,
                     backgroundColor: Colors.blue,
@@ -156,14 +158,14 @@ class _LandingPageWebState extends State<LandingPageWeb> {
           ),
         ),
           //Second Container about me
-          SizedBox(
+          Container(
             height: heightDevice/1.5,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Image.asset("assets/web.png", height: heightDevice/2.0),
-                const Column(
+                Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -192,9 +194,9 @@ class _LandingPageWebState extends State<LandingPageWeb> {
             ),
           ),
           //Third Container with specialties
-          SizedBox(
+          Container(
             height: heightDevice/1.3,
-            child:const Column(
+            child:Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 SansBold("What I do?", 40.0),
@@ -211,19 +213,18 @@ class _LandingPageWebState extends State<LandingPageWeb> {
             )
           ),
           //Fourth Container for contact information
-          SizedBox(
+          Container(
             height: heightDevice,
             child: Form(
               key:formKey,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  const SansBold("Contact Me", 40.0),
+                  SansBold("Contact Me", 40.0),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Column(
-              
                         children: [
                           TextForm(
                               heading: "First Name", 
@@ -237,7 +238,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                                 }
                               },
                             ),
-                          const SizedBox(height: 15,),
+                          SizedBox(height: 15,),
                           TextForm(
                             heading: "Email", 
                             width: 350, 
@@ -255,7 +256,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                       Column(
                         children: [
                           TextForm(heading: "Last Name", width: 350, hintText: "Please enter in laster name", controller: _lastNameController,),
-                          const SizedBox(height: 15,),
+                          SizedBox(height: 15,),
                           TextForm(heading: "Phone Number", width: 350, hintText: "Please enter in your phone number", maxLine: 1, controller:  _phoneNameController,)
                         ],
                       )
@@ -281,7 +282,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                     height: 60.0,
                     minWidth: 200.0,
                     color:Colors.blueAccent,
-                    child:const SansBold("Submit", 20.0),
+                    child:SansBold("Submit", 20.0),
                     onPressed: () async{
                       //logger.d(_firstNameController.text);
                       final sendingData = AddDataFireStore();
@@ -307,7 +308,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
               ),
             ),
           ),
-          const SizedBox(height: 10.0,)
+          SizedBox(height: 10.0,)
         ]
       ),
     );
