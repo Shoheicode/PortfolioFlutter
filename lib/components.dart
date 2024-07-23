@@ -63,6 +63,66 @@ class _TabsWebState extends State<TabsWeb>{
   
 }
 
+class TabsMobile extends StatefulWidget{
+  final title;
+  final color;
+  const TabsMobile(this.title, {super.key, this.color});
+
+  @override
+  State<StatefulWidget> createState() =>_TabsMobileState();
+
+}
+
+class _TabsMobileState extends State<TabsMobile>{
+  bool isSelected = false;
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return MaterialButton(
+      onPressed: (){
+        print("HELLO");
+        if(widget.title == "Home"){
+          Navigator.of(context).pushNamed('/');
+        }
+        else{
+          Navigator.of(context).pushNamed('/' + widget.title);
+        }
+      },
+      child: MouseRegion(
+        onEnter: (e){
+          setState(() {
+            isSelected = true;
+          });
+        },
+        onExit: (e){
+          setState(() {
+            isSelected = false;
+          });
+        },
+        child: AnimatedDefaultTextStyle(
+          duration: const Duration(milliseconds: 100),
+          curve: Curves.fastEaseInToSlowEaseOut,
+          style: isSelected ? GoogleFonts.oswald(
+            shadows: [
+              Shadow(color: widget.color ?? Colors.black, offset: const Offset(0, -10,), )],
+              color:Colors.transparent,
+              fontSize: 25.0,
+              decoration: TextDecoration.underline,
+              decorationThickness: 1,
+              decorationColor: Colors.blue,
+            ) : 
+            GoogleFonts.oswald(
+              color:widget.color ?? Colors.black,
+              fontSize: 23.0
+            ),
+          child: Text(widget.title),
+        ),
+      ),
+    );
+  }
+  
+}
+
 
 class SansBold extends StatelessWidget{
   final text;
