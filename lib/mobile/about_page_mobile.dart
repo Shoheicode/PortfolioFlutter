@@ -31,7 +31,7 @@ class _AboutMobileState extends State<AboutMobile> {
     // TODO: implement build
     return Scaffold(
       extendBodyBehindAppBar: true,
-    drawer:Drawer(
+    endDrawer:Drawer(
       backgroundColor: Colors.white,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -55,7 +55,18 @@ class _AboutMobileState extends State<AboutMobile> {
                 },
               ),
             ],
-          )
+          ),
+           Column(
+              children: [
+                TabsMobile("Home",),
+                SizedBox(height: 15,),
+                TabsMobile("About",),
+                SizedBox(height: 15,),
+                TabsMobile("Projects",),
+                SizedBox(height: 15,),
+                TabsMobile("Contact",),
+              ],
+            )
         ]
       ),
     ),
@@ -69,98 +80,98 @@ class _AboutMobileState extends State<AboutMobile> {
         color: Colors.black
       ),
       //Sections of the App Bar
-      title: const Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            Spacer(flex: 3,),
-            TabsWeb("Home"),
-            Spacer(),
-            TabsWeb("Projects"),
-            // Spacer(),
-            // TabsWeb("Blog"),
-            Spacer(),
-            TabsWeb("About"),
-            Spacer(),
-            TabsWeb("Contact")
-          ]
-        ),
     ),
     //The Main body of the web application
     body: ListView(
       children: [
-        const SizedBox(
-          height: 500.0,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SansBold("About Me", 40.0),
-                  SizedBox(height: 15.0,),
-                  Sans("Hello! I'm Jason Irie. I specialize in C++ and making applications using C++.", 15.0),
-                  Sans("I strive to ensure my projects and my work is the best to its ability and ", 15),
-                  Sans("striving to utilize my abilities to help others. I have created many projects that", 15.0),
-                  Sans("demonstrate my understanding and knowledge in C++ and Data Structures and Algorithims", 15.0),
-                  SizedBox(height:10),
-                  Row(
-                    children: [
-                      BlueContainer(text: "Flutter"),
-                      SizedBox(width: 10,),
-                      BlueContainer(text: "C++"),
-                      SizedBox(width: 10,),
-                      BlueContainer(text: "Java"),
-                      SizedBox(width: 10,),
-                      BlueContainer(text: "Robotics"),
-                      SizedBox(width: 10,),
-                    ],
-                    )
-                ],
-              )
-            ]
+        Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: SizedBox(
+            height: heightDevice/1.2,
+            width: widthDevice/1.5,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SansBold("About Me", 40.0),
+                    SizedBox(height: 15.0,),
+                    Container(
+                      width: widthDevice/1.2,
+                      child: Sans("Hello! I'm Jason Irie. I specialize in C++ and making applications using C++. I strive to ensure my projects and my work is the best to its ability and striving to utilize my abilities to help others. I have created many projects that demonstrate my understanding and knowledge in C++ and Data Structures and Algorithims.", 15.0)
+                    ),
+                    SizedBox(height:10),
+                    Row(
+                      children: [
+                        BlueContainer(text: "Flutter"),
+                        SizedBox(width: 10,),
+                        BlueContainer(text: "C++"),
+                        SizedBox(width: 10,),
+                        BlueContainer(text: "Java"),
+                        SizedBox(width: 10,),
+                        BlueContainer(text: "Robotics"),
+                        SizedBox(width: 10,),
+                      ],
+                      )
+                  ],
+                )
+              ]
+            ),
           ),
         ),
-
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            const AnimatedCard(imagePath: "assets/cpp.png", width: 300, height: 300),
-            SizedBox(
-              height: heightDevice/3,
-              child: const Column(
-                children: [
-                  SansBold("C++",  40),
-                  SizedBox(height: 10,),
-                  Sans("Do you need help creating an application in C++? I have made many projects using C++", 20)
-                ]
-              ),
-            )
-            
-          ],
+        
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              const AnimatedCard(imagePath: "assets/cpp.png", width: 300, height: 300),
+              SizedBox(height: 40,),
+              SizedBox(
+                height: heightDevice/3,
+                width: widthDevice/1.1,
+                child: const Column(
+                  children: [
+                    SansBold("C++",  40),
+                    SizedBox(height: 20,),
+                    Sans("Do you need help creating an application in C++? I have made many projects using C++", 20)
+                  ]
+                ),
+              )
+              
+            ],
+          ),
         ),
         const SizedBox(height: 100.0,),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            SizedBox(
-              height: heightDevice/3,
-              width: widthDevice/2,
-              child: const Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SansBold("Flutter and Firebase",  40),
-                  SizedBox(height: 10,),
-                  Sans("Do you need help creating a web application or app? I know my way using Flutter and Firebase and competed in the Google Solution Challenge.", 20)
-                ]
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              SizedBox(
+                height: heightDevice/3,
+                width: widthDevice/1.1,
+                child: const Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SansBold("Flutter and Firebase",  40),
+                    SizedBox(height: 10,),
+                    Sans("Do you need help creating a web application or app? I know my way using Flutter and Firebase and competed in the Google Solution Challenge.", 20)
+                  ]
+                ),
               ),
-            ),
-            const AnimatedCard(imagePath: "assets/flutter.png", width: 300, height: 300, reverese: true,),
-            const AnimatedCard(imagePath: "assets/firebase.png", width: 300 , height: 300)
-
-            
-          ],
+              const AnimatedCard(imagePath: "assets/flutter.png", width: 300, height: 300, reverese: true,),
+              const AnimatedCard(imagePath: "assets/firebase.png", width: 300 , height: 300)
+          
+              
+            ],
+          ),
         ),
         const SizedBox(height: 100.0,),
         Row(

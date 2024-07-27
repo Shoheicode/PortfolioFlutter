@@ -79,6 +79,7 @@ class _TabsMobileState extends State<TabsMobile>{
   Widget build(BuildContext context) {
     // TODO: implement build
     return MaterialButton(
+      color: Colors.black,
       onPressed: (){
         print("HELLO");
         if(widget.title == "Home"){
@@ -112,7 +113,7 @@ class _TabsMobileState extends State<TabsMobile>{
               decorationColor: Colors.blue,
             ) : 
             GoogleFonts.oswald(
-              color:widget.color ?? Colors.black,
+              color:widget.color ?? Colors.blueAccent,
               fontSize: 23.0
             ),
           child: Text(widget.title),
@@ -134,6 +135,7 @@ class SansBold extends StatelessWidget{
     // TODO: implement build
     return Text(
       text, 
+      softWrap: true,
       style: GoogleFonts.openSans(
         fontSize: size,
         fontWeight: FontWeight.bold,
@@ -155,6 +157,7 @@ class Sans extends StatelessWidget{
       style: GoogleFonts.openSans(
         fontSize: size,
       ),
+      softWrap: true,
     );
   }
   
@@ -280,7 +283,7 @@ class _AnimatedCardWebState extends State<AnimatedCardWeb> with SingleTickerProv
                       fit: widget.fit,
                     ),
                     const SizedBox(height: 10,),
-                    Sans(widget.text, 20)
+                    Sans(widget.text, 20),
                   ]
                 ),
               ),
