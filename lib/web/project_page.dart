@@ -271,22 +271,24 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
                           const Sans("Please check it out!", 30.0),
                           const Sans("and was submitted", 30.0),
                           const SizedBox(height: 15.0),
-                          IconButton(
-                            icon: SvgPicture.asset("assets/github.svg",
-                                color: Colors.black, width: 35.0),
-                            onPressed: () async {
-                              await launchUrl(Uri.parse(
-                                  "https://github.com/Shoheicode/Project-3-AI-Customer-Support/tree/main"));
-                            },
-                          ),
-                          IconButton(
-                            icon: Image.asset("assets/web.png",
-                                color: Colors.black, width: 35.0),
-                            onPressed: () async {
-                              await launchUrl(Uri.parse(
-                                  "https://project-3-ai-customer-support.vercel.app/"));
-                            },
-                          ),
+                          Row(children: [
+                            IconButton(
+                              icon: SvgPicture.asset("assets/github.svg",
+                                  color: Colors.black, width: 35.0),
+                              onPressed: () async {
+                                await launchUrl(Uri.parse(
+                                    "https://github.com/Shoheicode/Project-3-AI-Customer-Support/tree/main"));
+                              },
+                            ),
+                            IconButton(
+                              icon: Image.asset("assets/web.png",
+                                  color: Colors.black, width: 35.0),
+                              onPressed: () async {
+                                await launchUrl(Uri.parse(
+                                    "https://project-3-ai-customer-support.vercel.app/"));
+                              },
+                            ),
+                          ])
                         ],
                       ),
                       const AnimatedCard(
