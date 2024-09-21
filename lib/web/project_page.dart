@@ -330,7 +330,7 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
                                     color: Colors.black, width: 35.0),
                                 onPressed: () async {
                                   await launchUrl(Uri.parse(
-                                      "https://github.com/Shoheicode/CS30-ICEMAN"));
+                                      "https://github.com/Shoheicode/Project-4-AI-Flashcards"));
                                 },
                               ),
                               IconButton(
