@@ -213,7 +213,7 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
                           height: 500),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 100,
                   ),
                   Row(
@@ -245,7 +245,7 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 100,
                   ),
                   Row(
@@ -295,7 +295,7 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
                           height: 500),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 100,
                   ),
                   Row(

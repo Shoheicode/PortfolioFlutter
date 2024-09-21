@@ -3,11 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/firebase_options.dart';
 import 'package:portfolio/mobile/landing_page_mobile.dart';
 import 'package:portfolio/routes.dart';
-import 'package:portfolio/web/about_page.dart';
-import 'package:portfolio/web/blog_page.dart';
-import 'package:portfolio/web/contact_page.dart';
 import 'package:portfolio/web/landing_page_web.dart';
-import 'package:portfolio/web/project_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,25 +21,23 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // routes:{
-      //   //'/': (_) => const LandingPageWeb(),
-      //   '/About': (_) => const AboutWeb(),
-      //   '/Projects': (_) => const ProjectPageWeb(),
-      //   '/Contact': (_) =>const ContactWeb(),
-      // },
-      onGenerateRoute: (settings) => Routes.generatorRoute(settings),
-      //initialRoute: '/',
-      title: "Jason Irie",
-      home: LayoutBuilder(
-        builder: (context, constraints){
-          if(constraints.maxWidth > 800){
-            return const LandingPageWeb();
-          }
-          else{
-            return const LandingPageMobile();
-          }
-        },
-      )
-    );
+        // routes:{
+        //   //'/': (_) => const LandingPageWeb(),
+        //   '/About': (_) => const AboutWeb(),
+        //   '/Projects': (_) => const ProjectPageWeb(),
+        //   '/Contact': (_) =>const ContactWeb(),
+        // },
+        onGenerateRoute: (settings) => Routes.generatorRoute(settings),
+        //initialRoute: '/',
+        title: "Jason Irie",
+        home: LayoutBuilder(
+          builder: (context, constraints) {
+            if (constraints.maxWidth > 800) {
+              return const LandingPageWeb();
+            } else {
+              return const LandingPageMobile();
+            }
+          },
+        ));
   }
 }
