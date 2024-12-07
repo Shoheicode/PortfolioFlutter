@@ -205,14 +205,21 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
                                 color: Colors.black, width: 35.0),
                             onPressed: () async {
                               await launchUrl(Uri.parse(
-                                  "https://github.com/El-Camino-Google-Developer-Student-Club/El-Camino-2023-Solution-Challenge"));
+                                  "https://github.com/Shoheicode/fitness-app-project"));
+                            },
+                          ),
+                          IconButton(
+                            icon: Image.asset("assets/web.png",
+                                color: Colors.black, width: 35.0),
+                            onPressed: () async {
+                              await launchUrl(Uri.parse(
+                                  "https://fitness-app-project-theta.vercel.app/"));
                             },
                           ),
                         ],
                       ),
                       const AnimatedCard(
-                          imagePath:
-                              "../assets/ProjectsFolder/astarfitness.jpg",
+                          imagePath: "assets/ProjectsFolder/astarfitness.jpg",
                           width: 500,
                           height: 500),
                     ],
