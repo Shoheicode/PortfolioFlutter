@@ -84108,7 +84108,7 @@ A.ap0.prototype={
 $0(){var s=0,r=A.I(t.H)
 var $async$$0=A.J(function(a,b){if(a===1)return A.F(b,r)
 while(true)switch(s){case 0:s=2
-return A.M(A.cX(A.c5(u.B,0,null)),$async$$0)
+return A.M(A.cX(A.c5("https://github.com/Shoheicode/Project-4-AI-Flashcards",0,null)),$async$$0)
 case 2:return A.G(null,r)}})
 return A.H($async$$0,r)},
 $S:6}

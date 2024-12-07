@@ -181,7 +181,7 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
                     children: [
                       Column(
                         children: [
-                          const SansBold("TransferWise Project", 40.0),
+                          const SansBold("AStar Fitness Project", 40.0),
                           const SizedBox(
                             height: 15.0,
                           ),
@@ -346,6 +346,9 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
                         ],
                       )
                     ],
+                  ),
+                  const SizedBox(
+                    height: 100,
                   ),
                 ],
               ),
