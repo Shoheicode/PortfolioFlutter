@@ -200,22 +200,24 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
                           const Sans("crafting exercise programs", 30.0),
                           const Sans("that evolve as you do.", 30.0),
                           const SizedBox(height: 15.0),
-                          IconButton(
-                            icon: SvgPicture.asset("assets/github.svg",
-                                color: Colors.black, width: 35.0),
-                            onPressed: () async {
-                              await launchUrl(Uri.parse(
-                                  "https://github.com/Shoheicode/fitness-app-project"));
-                            },
-                          ),
-                          IconButton(
-                            icon: Image.asset("assets/web.png",
-                                color: Colors.black, width: 35.0),
-                            onPressed: () async {
-                              await launchUrl(Uri.parse(
-                                  "https://fitness-app-project-theta.vercel.app/"));
-                            },
-                          ),
+                          Row(children: [
+                            IconButton(
+                              icon: SvgPicture.asset("assets/github.svg",
+                                  color: Colors.black, width: 35.0),
+                              onPressed: () async {
+                                await launchUrl(Uri.parse(
+                                    "https://github.com/Shoheicode/fitness-app-project"));
+                              },
+                            ),
+                            IconButton(
+                              icon: Image.asset("assets/web.png",
+                                  color: Colors.black, width: 35.0),
+                              onPressed: () async {
+                                await launchUrl(Uri.parse(
+                                    "https://fitness-app-project-theta.vercel.app/"));
+                              },
+                            ),
+                          ])
                         ],
                       ),
                       const AnimatedCard(
