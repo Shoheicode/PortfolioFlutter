@@ -185,17 +185,20 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
                           const SizedBox(
                             height: 15.0,
                           ),
-                          const Sans("This project focused on assisting", 30.0),
-                          const Sans("students in the transfer process", 30.0),
                           const Sans(
-                              "and helping them find courses at colleges",
+                              "AStar Fitness is an intelligent fitness", 30.0),
+                          const Sans(
+                              "application designed to revolutionize ", 30.0),
+                          const Sans(
+                              "how users achieve their health and fitness goals.",
                               30.0),
-                          const Sans("near them that can help", 30.0),
-                          const Sans("them transfer. It used Flutter,", 30.0),
-                          const Sans("Firebase, and Google API's", 30.0),
-                          const Sans("and was submitted", 30.0),
                           const Sans(
-                              "in the 2023 Google Solution Challenge.", 30.0),
+                              "Whether you're a beginner or an advanced athlete,",
+                              30.0),
+                          const Sans(
+                              "AStar Fitness adapts to your needs,", 30.0),
+                          const Sans("crafting exercise programs", 30.0),
+                          const Sans("that evolve as you do.", 30.0),
                           const SizedBox(height: 15.0),
                           IconButton(
                             icon: SvgPicture.asset("assets/github.svg",
@@ -208,7 +211,7 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
                         ],
                       ),
                       const AnimatedCard(
-                          imagePath: "assets/ImageofWebApplication.png",
+                          imagePath: "assets/ProjectsFolder/astarfitness.jpg",
                           width: 500,
                           height: 500),
                     ],
