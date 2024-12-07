@@ -234,7 +234,7 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
                             height: 15.0,
                           ),
                           const Sans(
-                              "This project focuses on the using C++ to create a game",
+                              "This project focuses on making a budgeting app using Flutter",
                               30.0),
                           const SizedBox(height: 15.0),
                           IconButton(
