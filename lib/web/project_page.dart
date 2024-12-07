@@ -219,7 +219,7 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
                         ],
                       ),
                       const AnimatedCard(
-                          imagePath: "assets/ProjectsFolder/astarfitness.jpg",
+                          imagePath: "assets/astarfitness.png",
                           width: 500,
                           height: 500),
                     ],
