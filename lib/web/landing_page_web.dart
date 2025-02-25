@@ -170,32 +170,23 @@ class _LandingPageWebState extends State<LandingPageWeb> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Image.asset("assets/web.png", height: heightDevice / 2.0),
-              const Column(
+              Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    SansBold("About me", 40.0),
-                    SizedBox(
+                    const SansBold("About me", 40.0),
+                    const SizedBox(
                       height: 15,
                     ),
-                    Sans(
-                        "Hello! I'm Jason irie. I specialize in C++ and making applications using C++.",
-                        15.0,
-                        TextAlign.center),
-                    Sans(
-                        "I strive to ensure my projects and my work is the best to its ability and ",
-                        15.0,
-                        TextAlign.center),
-                    Sans(
-                        "striving to utilize my abilities to help others. I have created many projects that",
-                        15.0,
-                        TextAlign.center),
-                    Sans(
-                        "demonstrate my understanding and knowledge in C++ and Data Structures and Algorithims",
-                        15.0,
-                        TextAlign.center),
-                    SizedBox(height: 10),
-                    Row(
+                    SizedBox(
+                      width: widthDevice / 2.5,
+                      child: const Sans(
+                          "Hello! I'm Jason irie. I specialize in C++ and making applications using C++.I strive to ensure my projects and my work is the best to its ability and striving to utilize my abilities to help others. I have created many projects that demonstrate my understanding and knowledge in C++ and Data Structures and Algorithims",
+                          15.0,
+                          TextAlign.start),
+                    ),
+                    const SizedBox(height: 10),
+                    const Row(
                       children: [
                         BlueContainer(text: "Flutter"),
                         SizedBox(
