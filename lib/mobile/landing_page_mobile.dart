@@ -60,11 +60,6 @@ class _LandingPageMobileState extends State<LandingPageMobile> {
               child: Image.asset("assets/J.png"),
             ),
           ),
-          // CircleAvatar(
-          //   radius: 70,
-          //   backgroundColor: Colors.white,
-          //   backgroundImage: AssetImage("assets/J.png"),
-          // ),
           const SizedBox(
             height: 15,
           ),
