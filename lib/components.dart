@@ -132,7 +132,9 @@ class _TabsMobileState extends State<TabsMobile> {
 class SansBold extends StatelessWidget {
   final text;
   final size;
-  const SansBold(this.text, this.size, {super.key});
+  final align;
+  const SansBold(this.text, this.size,
+      {super.key, this.align = TextAlign.start});
 
   @override
   Widget build(BuildContext context) {
@@ -140,6 +142,7 @@ class SansBold extends StatelessWidget {
     return Text(
       text,
       softWrap: true,
+      textAlign: align,
       style: GoogleFonts.openSans(
         fontSize: size,
         fontWeight: FontWeight.bold,
