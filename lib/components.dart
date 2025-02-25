@@ -162,6 +162,7 @@ class Sans extends StatelessWidget {
       style: GoogleFonts.openSans(
         fontSize: size,
       ),
+      textAlign: align,
       softWrap: true,
     );
   }

@@ -159,7 +159,8 @@ class _LandingPageMobileState extends State<LandingPageMobile> {
                     height: 15,
                   ),
                   SansBold("Jason Irie", widthDevice / 18),
-                  Sans("Software Developer", widthDevice / 11),
+                  Sans(
+                      "Software Developer", widthDevice / 11, TextAlign.center),
                   const SizedBox(height: 15.0),
                   const Row(
                     children: [

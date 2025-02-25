@@ -185,20 +185,24 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
                           const SizedBox(
                             height: 15.0,
                           ),
-                          const Sans(
-                              "AStar Fitness is an intelligent fitness", 30.0),
-                          const Sans(
-                              "application designed to revolutionize ", 30.0),
+                          const Sans("AStar Fitness is an intelligent fitness",
+                              30.0, TextAlign.center),
+                          const Sans("application designed to revolutionize ",
+                              30.0, TextAlign.center),
                           const Sans(
                               "how users achieve their health and fitness goals.",
-                              30.0),
+                              30.0,
+                              TextAlign.center),
                           const Sans(
                               "Whether you're a beginner or an advanced athlete,",
-                              30.0),
+                              30.0,
+                              TextAlign.center),
+                          const Sans("AStar Fitness adapts to your needs,",
+                              30.0, TextAlign.center),
+                          const Sans("crafting exercise programs", 30.0,
+                              TextAlign.center),
                           const Sans(
-                              "AStar Fitness adapts to your needs,", 30.0),
-                          const Sans("crafting exercise programs", 30.0),
-                          const Sans("that evolve as you do.", 30.0),
+                              "that evolve as you do.", 30.0, TextAlign.center),
                           const SizedBox(height: 15.0),
                           Row(children: [
                             IconButton(
@@ -270,19 +274,22 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
                           const SizedBox(
                             height: 15.0,
                           ),
-                          const Sans(
-                              "This bot is meant to help out and ", 30.0),
+                          const Sans("This bot is meant to help out and ", 30.0,
+                              TextAlign.center),
                           const Sans(
                               "assists users in customer related activities.",
-                              30.0),
+                              30.0,
+                              TextAlign.center),
+                          const Sans("This bot uses OpenAI and Firebase to ",
+                              30.0, TextAlign.center),
+                          const Sans("allow users to get a great experience",
+                              30.0, TextAlign.center),
+                          const Sans("chatting and talking with the Bot,", 30.0,
+                              TextAlign.center),
                           const Sans(
-                              "This bot uses OpenAI and Firebase to ", 30.0),
+                              "Please check it out!", 30.0, TextAlign.center),
                           const Sans(
-                              "allow users to get a great experience", 30.0),
-                          const Sans(
-                              "chatting and talking with the Bot,", 30.0),
-                          const Sans("Please check it out!", 30.0),
-                          const Sans("and was submitted", 30.0),
+                              "and was submitted", 30.0, TextAlign.center),
                           const SizedBox(height: 15.0),
                           Row(children: [
                             IconButton(
