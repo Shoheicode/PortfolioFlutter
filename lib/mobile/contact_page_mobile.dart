@@ -43,7 +43,7 @@ class _ContactMobileState extends State<ContactMobile> {
 
     // TODO: implement build
     return Scaffold(
-      drawer: Drawer(
+      endDrawer: Drawer(
         backgroundColor: Colors.white,
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           const CircleAvatar(
