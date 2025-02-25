@@ -19,7 +19,6 @@ class _TabsWebState extends State<TabsWeb> {
     // TODO: implement build
     return MaterialButton(
       onPressed: () {
-        print("HELLO");
         if (widget.title == "Home") {
           Navigator.of(context).pushNamed('/');
         } else {
