@@ -221,8 +221,6 @@ class _AboutMobileState extends State<AboutMobile> {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                const AnimatedCard(
-                    imagePath: "assets/java.png", width: 300, height: 300),
                 SizedBox(
                   height: heightDevice / 3,
                   width: widthDevice / 1.1,
@@ -236,6 +234,8 @@ class _AboutMobileState extends State<AboutMobile> {
                         20)
                   ]),
                 ),
+                const AnimatedCard(
+                    imagePath: "assets/java.png", width: 300, height: 300),
               ],
             ),
           ),
