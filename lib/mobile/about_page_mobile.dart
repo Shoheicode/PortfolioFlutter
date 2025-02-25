@@ -207,7 +207,7 @@ class _AboutMobileState extends State<AboutMobile> {
                   height: 300,
                   reverese: true,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 50,
                 ),
                 const AnimatedCard(
