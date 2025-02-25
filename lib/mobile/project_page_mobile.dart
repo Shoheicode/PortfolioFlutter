@@ -34,7 +34,7 @@ class _ProjectPageMobileState extends State<ProjectPageMobile> {
     // TODO: implement build
     return Scaffold(
         extendBodyBehindAppBar: true,
-        drawer: Drawer(
+        endDrawer: Drawer(
           backgroundColor: Colors.white,
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
             const CircleAvatar(
