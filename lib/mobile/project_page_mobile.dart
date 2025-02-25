@@ -306,7 +306,7 @@ class _ProjectPageMobileState extends State<ProjectPageMobile> {
                                       color: Colors.black, width: 35.0),
                                   onPressed: () async {
                                     await launchUrl(Uri.parse(
-                                        "https://github.com/Shoheicode/Project-3-AI-Customer-Support/tree/main"));
+                                        "https://github.com/Shoheicode/BudgetApp"));
                                   },
                                 ),
                                 IconButton(
