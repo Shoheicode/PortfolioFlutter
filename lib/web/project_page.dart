@@ -252,14 +252,28 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
                               30.0,
                               TextAlign.center),
                           const SizedBox(height: 15.0),
-                          IconButton(
-                            icon: SvgPicture.asset("assets/github.svg",
-                                color: Colors.black, width: 35.0),
-                            onPressed: () async {
-                              await launchUrl(Uri.parse(
-                                  "https://github.com/Shoheicode/CS30-ICEMAN"));
-                            },
-                          ),
+                          Row(
+                              mainAxisAlignment: MainAxisAlignment
+                                  .center, // Centers content vertically
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                IconButton(
+                                  icon: SvgPicture.asset("assets/github.svg",
+                                      color: Colors.black, width: 35.0),
+                                  onPressed: () async {
+                                    await launchUrl(Uri.parse(
+                                        "https://github.com/Shoheicode/BudgetApp"));
+                                  },
+                                ),
+                                IconButton(
+                                  icon: Image.asset("assets/web.png",
+                                      color: Colors.black, width: 35.0),
+                                  onPressed: () async {
+                                    await launchUrl(Uri.parse(
+                                        "https://budgetapp-ee73a.web.app/"));
+                                  },
+                                ),
+                              ])
                         ],
                       )
                     ],
