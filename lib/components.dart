@@ -152,7 +152,7 @@ class Sans extends StatelessWidget {
   final text;
   final size;
   final align;
-  const Sans(this.text, this.size,this.align {super.key});
+  const Sans(this.text, this.size, this.align, {super.key});
 
   @override
   Widget build(BuildContext context) {
