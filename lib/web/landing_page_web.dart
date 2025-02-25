@@ -204,6 +204,14 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                         SizedBox(
                           width: 10,
                         ),
+                        BlueContainer(text: "React"),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        BlueContainer(text: "Python"),
+                        SizedBox(
+                          width: 10,
+                        ),
                       ],
                     )
                   ]),
