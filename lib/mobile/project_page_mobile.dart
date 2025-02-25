@@ -143,7 +143,7 @@ class _ProjectPageMobileState extends State<ProjectPageMobile> {
                       AnimatedCard(
                           imagePath: "assets/Iceman.png",
                           width: widthDevice,
-                          height: 500),
+                          height: widthDevice),
                       const SizedBox(
                         height: 100.0,
                       ),
@@ -172,7 +172,7 @@ class _ProjectPageMobileState extends State<ProjectPageMobile> {
                   const SizedBox(
                     height: 100.0,
                   ),
-                  Row(
+                  Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Column(
