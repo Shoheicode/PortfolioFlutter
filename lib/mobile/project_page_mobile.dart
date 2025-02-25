@@ -369,6 +369,9 @@ class _ProjectPageMobileState extends State<ProjectPageMobile> {
                           imagePath: "assets/flashcards.png",
                           width: 500,
                           height: 500),
+                      SizedBox(
+                        height: 100,
+                      ),
                       Column(
                         children: [
                           const SansBold(
@@ -379,14 +382,8 @@ class _ProjectPageMobileState extends State<ProjectPageMobile> {
                           const SizedBox(
                             height: 15.0,
                           ),
-                          const Sans('An innovative web application that’s ',
-                              30.0, TextAlign.center),
-                          const Sans('set to transform how students study',
-                              30.0, TextAlign.center),
-                          const Sans('This robust application uses ', 30.0,
-                              TextAlign.center),
                           const Sans(
-                              'cutting-edge technologies like Next.js, React, ',
+                              'An innovative web application that’s set to transform how students study. This robust application uses cutting-edge technologies like Next.js, React, ',
                               30.0,
                               TextAlign.center),
                           const Sans(
