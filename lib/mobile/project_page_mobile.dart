@@ -155,7 +155,8 @@ class _ProjectPageMobileState extends State<ProjectPageMobile> {
                           ),
                           const Sans(
                               "This project focuses on the using C++ to create a game",
-                              30.0),
+                              30.0,
+                              TextAlign.center),
                           const SizedBox(height: 15.0),
                           IconButton(
                             icon: SvgPicture.asset("assets/github.svg",
@@ -194,7 +195,8 @@ class _ProjectPageMobileState extends State<ProjectPageMobile> {
                           ),
                           const Sans(
                               "This project focused on assisting students in the transfer process and helping them find courses at colleges near them that can help them transfer. It used Flutter, Firebase, and Google API's and was submitted in the 2023 Google Solution Challenge.",
-                              30.0),
+                              30.0,
+                              TextAlign.center),
                           const SizedBox(height: 15.0),
                           IconButton(
                             icon: SvgPicture.asset("assets/github.svg",

@@ -130,7 +130,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                     height: 15,
                   ),
                   const SansBold("Jason Irie", 100.0),
-                  const Sans("Software Developer", 50.0),
+                  const Sans("Software Developer", 50.0, TextAlign.center),
                   const SizedBox(height: 15.0),
                   const Row(
                     children: [
@@ -138,7 +138,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                       SizedBox(
                         width: 20,
                       ),
-                      Sans("jsirie10@gmail.com", 15.0),
+                      Sans("jsirie10@gmail.com", 15.0, TextAlign.center),
                     ],
                   ),
                 ],
@@ -180,16 +180,20 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                     ),
                     Sans(
                         "Hello! I'm Jason irie. I specialize in C++ and making applications using C++.",
-                        15.0),
+                        15.0,
+                        TextAlign.center),
                     Sans(
                         "I strive to ensure my projects and my work is the best to its ability and ",
-                        15.0),
+                        15.0,
+                        TextAlign.center),
                     Sans(
                         "striving to utilize my abilities to help others. I have created many projects that",
-                        15.0),
+                        15.0,
+                        TextAlign.center),
                     Sans(
                         "demonstrate my understanding and knowledge in C++ and Data Structures and Algorithims",
-                        15.0),
+                        15.0,
+                        TextAlign.center),
                     SizedBox(height: 10),
                     Row(
                       children: [

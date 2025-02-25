@@ -108,16 +108,20 @@ class _AboutState extends State<AboutWeb> {
                       ),
                       Sans(
                           "Hello! I'm Jason irie. I specialize in C++ and making applications using C++.",
-                          15.0),
+                          15.0,
+                          TextAlign.center),
                       Sans(
                           "I strive to ensure my projects and my work is the best to its ability and ",
-                          15),
+                          15,
+                          TextAlign.center),
                       Sans(
                           "striving to utilize my abilities to help others. I have created many projects that",
-                          15.0),
+                          15.0,
+                          TextAlign.center),
                       Sans(
                           "demonstrate my understanding and knowledge in C++ and Data Structures and Algorithims",
-                          15.0),
+                          15.0,
+                          TextAlign.center),
                       SizedBox(height: 10),
                       Row(
                         children: [
@@ -157,7 +161,8 @@ class _AboutState extends State<AboutWeb> {
                   ),
                   Sans(
                       "Do you need help creating an application in C++? I have made many projects using C++",
-                      20)
+                      20,
+                      TextAlign.center)
                 ]),
               )
             ],
@@ -180,7 +185,8 @@ class _AboutState extends State<AboutWeb> {
                       ),
                       Sans(
                           "Do you need help creating a web application or app? I know my way using Flutter and Firebase and competed in the Google Solution Challenge.",
-                          20)
+                          20,
+                          TextAlign.center)
                     ]),
               ),
               const AnimatedCard(
@@ -210,10 +216,12 @@ class _AboutState extends State<AboutWeb> {
                   ),
                   Sans(
                       "Do you need help creating an application using Java? That's my cup of joe (joke). ",
-                      20),
+                      20,
+                      TextAlign.center),
                   Sans(
                       "I have coded many things from Robots to games of Tic-Tac-Toe.",
-                      20),
+                      20,
+                      TextAlign.center),
                 ]),
               ),
             ],

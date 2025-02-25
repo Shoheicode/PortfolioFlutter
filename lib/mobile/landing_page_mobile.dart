@@ -168,7 +168,7 @@ class _LandingPageMobileState extends State<LandingPageMobile> {
                       SizedBox(
                         width: 20,
                       ),
-                      Sans("jsirie10@gmail.com", 15.0),
+                      Sans("jsirie10@gmail.com", 15.0, TextAlign.center),
                     ],
                   ),
                   const SizedBox(
@@ -217,13 +217,16 @@ class _LandingPageMobileState extends State<LandingPageMobile> {
                     ),
                     Sans(
                         "Hello! I'm Jason Irie. I specialize in C++ and making applications using C++.",
-                        15.0),
+                        15.0,
+                        TextAlign.center),
                     Sans(
                         "I strive to ensure my projects and my work is the best to its ability and striving to utilize my abilities to help others. I have created many projects that",
-                        15.0),
+                        15.0,
+                        TextAlign.center),
                     Sans(
                         "demonstrate my understanding and knowledge in C++ and Data Structures and Algorithims",
-                        15.0),
+                        15.0,
+                        TextAlign.center),
                     SizedBox(height: 10),
                     Row(
                       children: [
