@@ -190,7 +190,7 @@ class TextForm extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Sans(heading, 16.0),
+        Sans(heading, 16.0, TextAlign.center),
         const SizedBox(height: 5.0),
         SizedBox(
           width: width,
@@ -294,7 +294,7 @@ class _AnimatedCardWebState extends State<AnimatedCardWeb>
             const SizedBox(
               height: 10,
             ),
-            Sans(widget.text, 20),
+            Sans(widget.text, 20, TextAlign.center),
           ]),
         ),
       ),
