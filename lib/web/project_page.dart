@@ -159,7 +159,8 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
                           ),
                           const Sans(
                               "This project focuses on the using C++ to create a game",
-                              30.0),
+                              30.0,
+                              TextAlign.center),
                           const SizedBox(height: 15.0),
                           IconButton(
                             icon: SvgPicture.asset("assets/github.svg",
@@ -248,7 +249,8 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
                           ),
                           const Sans(
                               "This project focuses on making a budgeting app using Flutter",
-                              30.0),
+                              30.0,
+                              TextAlign.center),
                           const SizedBox(height: 15.0),
                           IconButton(
                             icon: SvgPicture.asset("assets/github.svg",
@@ -333,15 +335,18 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
                           const SizedBox(
                             height: 15.0,
                           ),
-                          const Sans(
-                              'An innovative web application that’s ', 30.0),
-                          const Sans(
-                              'set to transform how students study', 30.0),
-                          const Sans('This robust application uses ', 30.0),
+                          const Sans('An innovative web application that’s ',
+                              30.0, TextAlign.center),
+                          const Sans('set to transform how students study',
+                              30.0, TextAlign.center),
+                          const Sans('This robust application uses ', 30.0,
+                              TextAlign.center),
                           const Sans(
                               'cutting-edge technologies like Next.js, React, ',
-                              30.0),
-                          const Sans('Firebase, and Stripe.', 30.0),
+                              30.0,
+                              TextAlign.center),
+                          const Sans(
+                              'Firebase, and Stripe.', 30.0, TextAlign.center),
                           const SizedBox(height: 15.0),
                           Row(
                             children: [
