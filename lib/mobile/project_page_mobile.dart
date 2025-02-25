@@ -183,24 +183,18 @@ class _ProjectPageMobileState extends State<ProjectPageMobile> {
                         height: 100.0,
                       ),
                       Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment
+                            .center, // Centers content vertically
+                        crossAxisAlignment: CrossAxisAlignment
+                            .center, // Centers content horizontally
                         children: [
                           const SansBold("TransferWise Project", 40.0),
                           const SizedBox(
                             height: 15.0,
                           ),
-                          const Sans("This project focused on assisting", 30.0),
-                          const Sans("students in the transfer process", 30.0),
                           const Sans(
-                              "and helping them find courses at colleges",
+                              "This project focused on assisting students in the transfer process and helping them find courses at colleges near them that can help them transfer. It used Flutter, Firebase, and Google API's and was submitted in the 2023 Google Solution Challenge.",
                               30.0),
-                          const Sans("near them that can help", 30.0),
-                          const Sans("them transfer. It used Flutter,", 30.0),
-                          const Sans("Firebase, and Google API's", 30.0),
-                          const Sans("and was submitted", 30.0),
-                          const Sans(
-                              "in the 2023 Google Solution Challenge.", 30.0),
                           const SizedBox(height: 15.0),
                           IconButton(
                             icon: SvgPicture.asset("assets/github.svg",
