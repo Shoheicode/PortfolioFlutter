@@ -175,10 +175,10 @@ class _ProjectPageMobileState extends State<ProjectPageMobile> {
                   Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      const AnimatedCard(
+                      AnimatedCard(
                           imagePath: "assets/ImageofWebApplication.png",
-                          width: 500,
-                          height: 500),
+                          width: widthDevice,
+                          height: widthDevice),
                       const SizedBox(
                         height: 100.0,
                       ),
