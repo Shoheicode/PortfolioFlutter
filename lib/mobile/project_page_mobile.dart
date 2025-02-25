@@ -177,6 +177,10 @@ class _ProjectPageMobileState extends State<ProjectPageMobile> {
                     children: [
                       Column(
                         children: [
+                          const AnimatedCard(
+                              imagePath: "assets/ImageofWebApplication.png",
+                              width: 500,
+                              height: 500),
                           const SansBold("TransferWise Project", 40.0),
                           const SizedBox(
                             height: 15.0,
@@ -203,10 +207,6 @@ class _ProjectPageMobileState extends State<ProjectPageMobile> {
                           ),
                         ],
                       ),
-                      const AnimatedCard(
-                          imagePath: "assets/ImageofWebApplication.png",
-                          width: 500,
-                          height: 500),
                     ],
                   ),
                 ],
