@@ -200,11 +200,7 @@ class _LandingPageMobileState extends State<LandingPageMobile> {
                       height: 15,
                     ),
                     Sans(
-                        "Hello! I'm Jason Irie. I specialize in C++ and making applications using C++. I strive to ensure my projects and my work is the best to its ability and striving to utilize my abilities to help others. I have created many projects that",
-                        15.0,
-                        TextAlign.center),
-                    Sans(
-                        "demonstrate my understanding and knowledge in C++ and Data Structures and Algorithims",
+                        "Hello! I'm Jason Irie. I specialize in C++ and making applications using C++. I strive to ensure my projects and my work is the best to its ability and striving to utilize my abilities to help others. I have created many projects that demonstrate my understanding and knowledge in C++ and Data Structures and Algorithims.",
                         15.0,
                         TextAlign.center),
                     SizedBox(height: 10),
