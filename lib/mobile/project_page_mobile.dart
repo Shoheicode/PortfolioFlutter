@@ -220,6 +220,13 @@ class _ProjectPageMobileState extends State<ProjectPageMobile> {
                   Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
+                      const AnimatedCard(
+                          imagePath: "assets/astarfitness.png",
+                          width: 500,
+                          height: 500),
+                      SizedBox(
+                        height: 100.0,
+                      ),
                       Column(
                         children: [
                           const SansBold(
@@ -259,10 +266,6 @@ class _ProjectPageMobileState extends State<ProjectPageMobile> {
                               ])
                         ],
                       ),
-                      const AnimatedCard(
-                          imagePath: "assets/astarfitness.png",
-                          width: 500,
-                          height: 500),
                     ],
                   ),
                   const SizedBox(
