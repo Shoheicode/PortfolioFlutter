@@ -37,22 +37,27 @@ class _ProjectPageMobileState extends State<ProjectPageMobile> {
         endDrawer: Drawer(
           backgroundColor: Colors.white,
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-            const CircleAvatar(
-              radius: 70,
-              backgroundColor: Colors.white,
-              backgroundImage: AssetImage("assets/J.png"),
+            DrawerHeader(
+              padding: const EdgeInsets.only(bottom: 20.0),
+              child: Container(
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(width: 2.0, color: Colors.black),
+                ),
+                child: Image.asset("assets/J.png"),
+              ),
             ),
             const SizedBox(
               height: 15,
             ),
-            const SansBold("Jason Irie", 30),
+            const SansBold("Jason Irie", 30.0),
             const SizedBox(
               height: 15.0,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                urlLauncher("linkedin.png",
+                urlLauncher("assets/linkedin.png",
                     "https://www.linkedin.com/in/jason-irie-2bb2b0243/"),
                 IconButton(
                   icon: SvgPicture.asset("assets/github.svg",
@@ -60,6 +65,31 @@ class _ProjectPageMobileState extends State<ProjectPageMobile> {
                   onPressed: () async {
                     await launchUrl(Uri.parse("https://github.com/Shoheicode"));
                   },
+                ),
+              ],
+            ),
+            const Column(
+              children: [
+                TabsMobile(
+                  "Home",
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                TabsMobile(
+                  "About",
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                TabsMobile(
+                  "Projects",
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                TabsMobile(
+                  "Contact",
                 ),
               ],
             )
@@ -97,34 +127,6 @@ class _ProjectPageMobileState extends State<ProjectPageMobile> {
                     filterQuality: FilterQuality.high,
                     fit: BoxFit.cover,
                   ),
-                ),
-                title: const Row(
-                  children: [
-                    Spacer(
-                      flex: 3,
-                    ),
-                    TabsWeb(
-                      "Home",
-                      color: Colors.black,
-                    ),
-                    Spacer(),
-                    TabsWeb(
-                      "Projects",
-                      color: Colors.black,
-                    ),
-                    //Spacer(),
-                    //TabsWeb("Blog", color: Colors.black,),
-                    Spacer(),
-                    TabsWeb(
-                      "About",
-                      color: Colors.black,
-                    ),
-                    Spacer(),
-                    TabsWeb(
-                      "Contact",
-                      color: Colors.black,
-                    )
-                  ],
                 ),
               )
             ];
