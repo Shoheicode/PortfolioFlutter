@@ -92,22 +92,6 @@ class _ContactMobileState extends State<ContactMobile> {
                   fit: BoxFit.cover,
                 ),
               ),
-              title: const Row(
-                children: [
-                  Spacer(
-                    flex: 3,
-                  ),
-                  TabsWeb("Home"),
-                  Spacer(),
-                  TabsWeb("Projects"),
-                  // Spacer(),
-                  // TabsWeb("Blog"),
-                  Spacer(),
-                  TabsWeb("About"),
-                  Spacer(),
-                  TabsWeb("Contact")
-                ],
-              ),
             )
           ];
         },
