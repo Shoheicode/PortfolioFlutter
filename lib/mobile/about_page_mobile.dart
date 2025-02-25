@@ -215,24 +215,27 @@ class _AboutMobileState extends State<AboutMobile> {
           const SizedBox(
             height: 100.0,
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              const AnimatedCard(
-                  imagePath: "assets/java.png", width: 300, height: 300),
-              SizedBox(
-                height: heightDevice / 3,
-                child: const Column(children: [
-                  SansBold("Java", 40),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Sans(
-                      "Do you need help creating an application using Java? That's my cup of joe (joke). I have coded many things from Robots to games of Tic-Tac-Toe.",
-                      20)
-                ]),
-              ),
-            ],
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                const AnimatedCard(
+                    imagePath: "assets/java.png", width: 300, height: 300),
+                SizedBox(
+                  height: heightDevice / 3,
+                  child: const Column(children: [
+                    SansBold("Java", 40),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Sans(
+                        "Do you need help creating an application using Java? That's my cup of joe (joke). I have coded many things from Robots to games of Tic-Tac-Toe.",
+                        20)
+                  ]),
+                ),
+              ],
+            ),
           ),
           const SizedBox(
             height: 100.0,
