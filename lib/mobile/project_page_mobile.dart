@@ -214,6 +214,197 @@ class _ProjectPageMobileState extends State<ProjectPageMobile> {
                       ),
                     ],
                   ),
+                  const SizedBox(
+                    height: 100.0,
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Column(
+                        children: [
+                          const SansBold(
+                            "AStar Fitness Project",
+                            40.0,
+                            align: TextAlign.center,
+                          ),
+                          const SizedBox(
+                            height: 15.0,
+                          ),
+                          const Sans(
+                              "AStar Fitness is an intelligent fitness application designed to revolutionize how users achieve their health and fitness goals. Whether you're a beginner or an advanced athlete, AStar Fitness adapts to your needs, crafting exercise programs that evolve as you do.",
+                              30.0,
+                              TextAlign.center),
+                          const SizedBox(height: 15.0),
+                          Row(children: [
+                            IconButton(
+                              icon: SvgPicture.asset("assets/github.svg",
+                                  color: Colors.black, width: 35.0),
+                              onPressed: () async {
+                                await launchUrl(Uri.parse(
+                                    "https://github.com/Shoheicode/fitness-app-project"));
+                              },
+                            ),
+                            IconButton(
+                              icon: Image.asset("assets/web.png",
+                                  color: Colors.black, width: 35.0),
+                              onPressed: () async {
+                                await launchUrl(Uri.parse(
+                                    "https://fitness-app-project-theta.vercel.app/"));
+                              },
+                            ),
+                          ])
+                        ],
+                      ),
+                      const AnimatedCard(
+                          imagePath: "assets/astarfitness.png",
+                          width: 500,
+                          height: 500),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 100,
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      const AnimatedCard(
+                          imagePath: "assets/budget.png",
+                          width: 500,
+                          height: 500),
+                      Column(
+                        children: [
+                          const SansBold("Budget App", 40.0),
+                          const SizedBox(
+                            height: 15.0,
+                          ),
+                          const Sans(
+                              "This project focuses on making a budgeting app using Flutter",
+                              30.0,
+                              TextAlign.center),
+                          const SizedBox(height: 15.0),
+                          IconButton(
+                            icon: SvgPicture.asset("assets/github.svg",
+                                color: Colors.black, width: 35.0),
+                            onPressed: () async {
+                              await launchUrl(Uri.parse(
+                                  "https://github.com/Shoheicode/CS30-ICEMAN"));
+                            },
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 100,
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Column(
+                        children: [
+                          const SansBold("AI-Customer-Support", 40.0),
+                          const SizedBox(
+                            height: 15.0,
+                          ),
+                          const Sans("This bot is meant to help out and ", 30.0,
+                              TextAlign.center),
+                          const Sans(
+                              "assists users in customer related activities.",
+                              30.0,
+                              TextAlign.center),
+                          const Sans("This bot uses OpenAI and Firebase to ",
+                              30.0, TextAlign.center),
+                          const Sans("allow users to get a great experience",
+                              30.0, TextAlign.center),
+                          const Sans("chatting and talking with the Bot,", 30.0,
+                              TextAlign.center),
+                          const Sans(
+                              "Please check it out!", 30.0, TextAlign.center),
+                          const Sans(
+                              "and was submitted", 30.0, TextAlign.center),
+                          const SizedBox(height: 15.0),
+                          Row(children: [
+                            IconButton(
+                              icon: SvgPicture.asset("assets/github.svg",
+                                  color: Colors.black, width: 35.0),
+                              onPressed: () async {
+                                await launchUrl(Uri.parse(
+                                    "https://github.com/Shoheicode/Project-3-AI-Customer-Support/tree/main"));
+                              },
+                            ),
+                            IconButton(
+                              icon: Image.asset("assets/web.png",
+                                  color: Colors.black, width: 35.0),
+                              onPressed: () async {
+                                await launchUrl(Uri.parse(
+                                    "https://project-3-ai-customer-support.vercel.app/"));
+                              },
+                            ),
+                          ])
+                        ],
+                      ),
+                      const AnimatedCard(
+                          imagePath: "assets/chatbot.png",
+                          width: 500,
+                          height: 500),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 100,
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      const AnimatedCard(
+                          imagePath: "assets/flashcards.png",
+                          width: 500,
+                          height: 500),
+                      Column(
+                        children: [
+                          const SansBold("AStar Flashcards", 40.0),
+                          const SizedBox(
+                            height: 15.0,
+                          ),
+                          const Sans('An innovative web application that’s ',
+                              30.0, TextAlign.center),
+                          const Sans('set to transform how students study',
+                              30.0, TextAlign.center),
+                          const Sans('This robust application uses ', 30.0,
+                              TextAlign.center),
+                          const Sans(
+                              'cutting-edge technologies like Next.js, React, ',
+                              30.0,
+                              TextAlign.center),
+                          const Sans(
+                              'Firebase, and Stripe.', 30.0, TextAlign.center),
+                          const SizedBox(height: 15.0),
+                          Row(
+                            children: [
+                              IconButton(
+                                icon: SvgPicture.asset("assets/github.svg",
+                                    color: Colors.black, width: 35.0),
+                                onPressed: () async {
+                                  await launchUrl(Uri.parse(
+                                      "https://github.com/Shoheicode/Project-4-AI-Flashcards"));
+                                },
+                              ),
+                              IconButton(
+                                icon: Image.asset("assets/web.png",
+                                    color: Colors.black, width: 35.0),
+                                onPressed: () async {
+                                  await launchUrl(Uri.parse(
+                                      "https://project-4-ai-flashcards.vercel.app/"));
+                                },
+                              ),
+                            ],
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 100,
+                  ),
                 ],
               )
             ],
