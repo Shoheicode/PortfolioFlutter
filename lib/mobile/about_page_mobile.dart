@@ -194,7 +194,11 @@ class _AboutMobileState extends State<AboutMobile> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        SansBold("Flutter and Firebase", 40),
+                        SansBold(
+                          "Flutter and Firebase",
+                          40,
+                          align: TextAlign.center,
+                        ),
                         SizedBox(
                           height: 10,
                         ),
