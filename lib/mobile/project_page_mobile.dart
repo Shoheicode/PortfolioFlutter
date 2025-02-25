@@ -327,22 +327,10 @@ class _ProjectPageMobileState extends State<ProjectPageMobile> {
                           const SizedBox(
                             height: 15.0,
                           ),
-                          const Sans("This bot is meant to help out and ", 30.0,
-                              TextAlign.center),
                           const Sans(
-                              "assists users in customer related activities.",
+                              "This bot is meant to help out and assists users in customer related activities. This bot uses OpenAI and Firebase to allow users to get a great experience chatting and talking with the Bot. Please check it out!",
                               30.0,
                               TextAlign.center),
-                          const Sans("This bot uses OpenAI and Firebase to ",
-                              30.0, TextAlign.center),
-                          const Sans("allow users to get a great experience",
-                              30.0, TextAlign.center),
-                          const Sans("chatting and talking with the Bot,", 30.0,
-                              TextAlign.center),
-                          const Sans(
-                              "Please check it out!", 30.0, TextAlign.center),
-                          const Sans(
-                              "and was submitted", 30.0, TextAlign.center),
                           const SizedBox(height: 15.0),
                           Row(
                               mainAxisAlignment: MainAxisAlignment
