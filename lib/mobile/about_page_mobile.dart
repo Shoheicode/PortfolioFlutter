@@ -225,6 +225,7 @@ class _AboutMobileState extends State<AboutMobile> {
                     imagePath: "assets/java.png", width: 300, height: 300),
                 SizedBox(
                   height: heightDevice / 3,
+                  width: widthDevice / 1.1,
                   child: const Column(children: [
                     SansBold("Java", 40),
                     SizedBox(
