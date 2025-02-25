@@ -137,13 +137,16 @@ class _ProjectPageMobileState extends State<ProjectPageMobile> {
                 children: [
                   const SizedBox(height: 30.0),
                   const SansBold("Works", 40.0),
-                  Row(
+                  Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      const AnimatedCard(
+                      AnimatedCard(
                           imagePath: "assets/Iceman.png",
-                          width: 500,
+                          width: widthDevice,
                           height: 500),
+                      const SizedBox(
+                        height: 100.0,
+                      ),
                       Column(
                         children: [
                           const SansBold("IceMan Project", 40.0),
