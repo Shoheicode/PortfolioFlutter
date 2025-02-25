@@ -141,6 +141,14 @@ class _AboutState extends State<AboutWeb> {
                           SizedBox(
                             width: 10,
                           ),
+                          BlueContainer(text: "React"),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          BlueContainer(text: "Python"),
+                          SizedBox(
+                            width: 10,
+                          ),
                         ],
                       )
                     ],
