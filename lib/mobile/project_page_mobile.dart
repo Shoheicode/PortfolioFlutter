@@ -235,24 +235,28 @@ class _ProjectPageMobileState extends State<ProjectPageMobile> {
                               30.0,
                               TextAlign.center),
                           const SizedBox(height: 15.0),
-                          Row(children: [
-                            IconButton(
-                              icon: SvgPicture.asset("assets/github.svg",
-                                  color: Colors.black, width: 35.0),
-                              onPressed: () async {
-                                await launchUrl(Uri.parse(
-                                    "https://github.com/Shoheicode/fitness-app-project"));
-                              },
-                            ),
-                            IconButton(
-                              icon: Image.asset("assets/web.png",
-                                  color: Colors.black, width: 35.0),
-                              onPressed: () async {
-                                await launchUrl(Uri.parse(
-                                    "https://fitness-app-project-theta.vercel.app/"));
-                              },
-                            ),
-                          ])
+                          Row(
+                              mainAxisAlignment: MainAxisAlignment
+                                  .center, // Centers content vertically
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                IconButton(
+                                  icon: SvgPicture.asset("assets/github.svg",
+                                      color: Colors.black, width: 35.0),
+                                  onPressed: () async {
+                                    await launchUrl(Uri.parse(
+                                        "https://github.com/Shoheicode/fitness-app-project"));
+                                  },
+                                ),
+                                IconButton(
+                                  icon: Image.asset("assets/web.png",
+                                      color: Colors.black, width: 35.0),
+                                  onPressed: () async {
+                                    await launchUrl(Uri.parse(
+                                        "https://fitness-app-project-theta.vercel.app/"));
+                                  },
+                                ),
+                              ])
                         ],
                       ),
                       const AnimatedCard(
@@ -323,24 +327,28 @@ class _ProjectPageMobileState extends State<ProjectPageMobile> {
                           const Sans(
                               "and was submitted", 30.0, TextAlign.center),
                           const SizedBox(height: 15.0),
-                          Row(children: [
-                            IconButton(
-                              icon: SvgPicture.asset("assets/github.svg",
-                                  color: Colors.black, width: 35.0),
-                              onPressed: () async {
-                                await launchUrl(Uri.parse(
-                                    "https://github.com/Shoheicode/Project-3-AI-Customer-Support/tree/main"));
-                              },
-                            ),
-                            IconButton(
-                              icon: Image.asset("assets/web.png",
-                                  color: Colors.black, width: 35.0),
-                              onPressed: () async {
-                                await launchUrl(Uri.parse(
-                                    "https://project-3-ai-customer-support.vercel.app/"));
-                              },
-                            ),
-                          ])
+                          Row(
+                              mainAxisAlignment: MainAxisAlignment
+                                  .center, // Centers content vertically
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                IconButton(
+                                  icon: SvgPicture.asset("assets/github.svg",
+                                      color: Colors.black, width: 35.0),
+                                  onPressed: () async {
+                                    await launchUrl(Uri.parse(
+                                        "https://github.com/Shoheicode/Project-3-AI-Customer-Support/tree/main"));
+                                  },
+                                ),
+                                IconButton(
+                                  icon: Image.asset("assets/web.png",
+                                      color: Colors.black, width: 35.0),
+                                  onPressed: () async {
+                                    await launchUrl(Uri.parse(
+                                        "https://project-3-ai-customer-support.vercel.app/"));
+                                  },
+                                ),
+                              ])
                         ],
                       ),
                       const AnimatedCard(
@@ -379,6 +387,9 @@ class _ProjectPageMobileState extends State<ProjectPageMobile> {
                               'Firebase, and Stripe.', 30.0, TextAlign.center),
                           const SizedBox(height: 15.0),
                           Row(
+                            mainAxisAlignment: MainAxisAlignment
+                                .center, // Centers content vertically
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               IconButton(
                                 icon: SvgPicture.asset("assets/github.svg",
