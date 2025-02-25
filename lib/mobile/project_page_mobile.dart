@@ -323,7 +323,8 @@ class _ProjectPageMobileState extends State<ProjectPageMobile> {
                       ),
                       Column(
                         children: [
-                          const SansBold("AI-Customer-Support", 40.0),
+                          const SansBold("AI-Customer-Support", 40.0,
+                              align: TextAlign.center),
                           const SizedBox(
                             height: 15.0,
                           ),
@@ -370,7 +371,11 @@ class _ProjectPageMobileState extends State<ProjectPageMobile> {
                           height: 500),
                       Column(
                         children: [
-                          const SansBold("AStar Flashcards", 40.0),
+                          const SansBold(
+                            "AStar Flashcards",
+                            40.0,
+                            align: TextAlign.center,
+                          ),
                           const SizedBox(
                             height: 15.0,
                           ),
