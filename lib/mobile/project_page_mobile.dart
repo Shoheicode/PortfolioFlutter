@@ -175,12 +175,17 @@ class _ProjectPageMobileState extends State<ProjectPageMobile> {
                   Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
+                      const AnimatedCard(
+                          imagePath: "assets/ImageofWebApplication.png",
+                          width: 500,
+                          height: 500),
+                      const SizedBox(
+                        height: 100.0,
+                      ),
                       Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          const AnimatedCard(
-                              imagePath: "assets/ImageofWebApplication.png",
-                              width: 500,
-                              height: 500),
                           const SansBold("TransferWise Project", 40.0),
                           const SizedBox(
                             height: 15.0,
