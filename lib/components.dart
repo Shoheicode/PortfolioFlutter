@@ -82,7 +82,6 @@ class _TabsMobileState extends State<TabsMobile> {
     return MaterialButton(
       color: Colors.black,
       onPressed: () {
-        print("HELLO");
         if (widget.title == "Home") {
           Navigator.of(context).pushNamed('/');
         } else {
