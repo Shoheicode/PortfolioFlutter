@@ -177,7 +177,7 @@ class _AboutMobileState extends State<AboutMobile> {
             ),
           ),
           const SizedBox(
-            height: 100.0,
+            height: 50.0,
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -206,6 +206,9 @@ class _AboutMobileState extends State<AboutMobile> {
                   width: 300,
                   height: 300,
                   reverese: true,
+                ),
+                SizedBox(
+                  height: 50,
                 ),
                 const AnimatedCard(
                     imagePath: "assets/firebase.png", width: 300, height: 300)
