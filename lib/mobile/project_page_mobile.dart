@@ -266,7 +266,7 @@ class _ProjectPageMobileState extends State<ProjectPageMobile> {
                     ],
                   ),
                   const SizedBox(
-                    height: 100,
+                    height: 200,
                   ),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -275,9 +275,16 @@ class _ProjectPageMobileState extends State<ProjectPageMobile> {
                           imagePath: "assets/budget.png",
                           width: 500,
                           height: 500),
+                      SizedBox(
+                        height: 100.0,
+                      ),
                       Column(
                         children: [
-                          const SansBold("Budget App", 40.0),
+                          const SansBold(
+                            "Budget App",
+                            40.0,
+                            align: TextAlign.center,
+                          ),
                           const SizedBox(
                             height: 15.0,
                           ),
@@ -304,6 +311,13 @@ class _ProjectPageMobileState extends State<ProjectPageMobile> {
                   Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
+                      const AnimatedCard(
+                          imagePath: "assets/chatbot.png",
+                          width: 500,
+                          height: 500),
+                      SizedBox(
+                        height: 100.0,
+                      ),
                       Column(
                         children: [
                           const SansBold("AI-Customer-Support", 40.0),
@@ -351,10 +365,6 @@ class _ProjectPageMobileState extends State<ProjectPageMobile> {
                               ])
                         ],
                       ),
-                      const AnimatedCard(
-                          imagePath: "assets/chatbot.png",
-                          width: 500,
-                          height: 500),
                     ],
                   ),
                   const SizedBox(
