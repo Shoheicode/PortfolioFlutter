@@ -189,7 +189,11 @@ class _ProjectPageMobileState extends State<ProjectPageMobile> {
                         crossAxisAlignment: CrossAxisAlignment
                             .center, // Centers content horizontally
                         children: [
-                          const SansBold("TransferWise Project", 40.0),
+                          const SansBold(
+                            "TransferWise Project",
+                            40.0,
+                            align: TextAlign.center,
+                          ),
                           const SizedBox(
                             height: 15.0,
                           ),
