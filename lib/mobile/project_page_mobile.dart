@@ -141,7 +141,7 @@ class _ProjectPageMobileState extends State<ProjectPageMobile> {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       AnimatedCard(
-                          imagePath: "assets/Iceman.png",
+                          imagePath: "assets/projects/Iceman.png",
                           width: widthDevice,
                           height: widthDevice),
                       const SizedBox(

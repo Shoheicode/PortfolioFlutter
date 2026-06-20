@@ -148,7 +148,7 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       const AnimatedCard(
-                          imagePath: "assets/Iceman.png",
+                          imagePath: "assets/projects/Iceman.png",
                           width: 500,
                           height: 500),
                       Column(
