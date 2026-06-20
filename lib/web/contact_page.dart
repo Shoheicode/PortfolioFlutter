@@ -61,10 +61,10 @@ class _ContactState extends State<ContactWeb> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              urlLauncher("linkedin.png",
+              urlLauncher("assets/icons/linkedin.png",
                   "https://www.linkedin.com/in/jason-irie-2bb2b0243/"),
               IconButton(
-                icon: SvgPicture.asset("github.svg",
+                icon: SvgPicture.asset("assets/icons/github.svg",
                     color: Colors.black, width: 35.0),
                 onPressed: () async {
                   await launchUrl(Uri.parse("https://github.com/Shoheicode"));
