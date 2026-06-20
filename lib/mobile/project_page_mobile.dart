@@ -154,8 +154,8 @@ class _ProjectPageMobileState extends State<ProjectPageMobile> {
                             height: 15.0,
                           ),
                           const Sans(
-                              "This project focuses on the using C++ to create a game",
-                              30.0,
+                              "ICEMAN is a C++ arcade-style video game where players dig through an underground oil field, collect hidden items, avoid falling boulders, and outsmart enemy protesters. Built with object-oriented programming, inheritance, STL data structures, and pathfinding algorithms, the project combines classic gameplay mechanics with AI movement, collision detection, and real-time game logic.",
+                              20.0,
                               TextAlign.center),
                           const SizedBox(height: 15.0),
                           IconButton(
@@ -173,47 +173,6 @@ class _ProjectPageMobileState extends State<ProjectPageMobile> {
                   const SizedBox(
                     height: 100.0,
                   ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      AnimatedCard(
-                          imagePath: "assets/ImageofWebApplication.png",
-                          width: widthDevice,
-                          height: widthDevice),
-                      const SizedBox(
-                        height: 100.0,
-                      ),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment
-                            .center, // Centers content vertically
-                        crossAxisAlignment: CrossAxisAlignment
-                            .center, // Centers content horizontally
-                        children: [
-                          const SansBold(
-                            "TransferWise Project",
-                            40.0,
-                            align: TextAlign.center,
-                          ),
-                          const SizedBox(
-                            height: 15.0,
-                          ),
-                          const Sans(
-                              "This project focused on assisting students in the transfer process and helping them find courses at colleges near them that can help them transfer. It used Flutter, Firebase, and Google API's and was submitted in the 2023 Google Solution Challenge.",
-                              30.0,
-                              TextAlign.center),
-                          const SizedBox(height: 15.0),
-                          IconButton(
-                            icon: SvgPicture.asset("assets/github.svg",
-                                color: Colors.black, width: 35.0),
-                            onPressed: () async {
-                              await launchUrl(Uri.parse(
-                                  "https://github.com/El-Camino-Google-Developer-Student-Club/El-Camino-2023-Solution-Challenge"));
-                            },
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
                   const SizedBox(
                     height: 100.0,
                   ),
@@ -221,7 +180,7 @@ class _ProjectPageMobileState extends State<ProjectPageMobile> {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       const AnimatedCard(
-                          imagePath: "assets/astarfitness.png",
+                          imagePath: "assets/projects/astarfitness.png",
                           width: 500,
                           height: 500),
                       SizedBox(
@@ -275,112 +234,7 @@ class _ProjectPageMobileState extends State<ProjectPageMobile> {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       const AnimatedCard(
-                          imagePath: "assets/budget.png",
-                          width: 500,
-                          height: 500),
-                      SizedBox(
-                        height: 100.0,
-                      ),
-                      Column(
-                        children: [
-                          const SansBold(
-                            "Budget App",
-                            40.0,
-                            align: TextAlign.center,
-                          ),
-                          const SizedBox(
-                            height: 15.0,
-                          ),
-                          const Sans(
-                              "This project focuses on making a budgeting app using Flutter",
-                              30.0,
-                              TextAlign.center),
-                          const SizedBox(height: 15.0),
-                          Row(
-                              mainAxisAlignment: MainAxisAlignment
-                                  .center, // Centers content vertically
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                IconButton(
-                                  icon: SvgPicture.asset("assets/github.svg",
-                                      color: Colors.black, width: 35.0),
-                                  onPressed: () async {
-                                    await launchUrl(Uri.parse(
-                                        "https://github.com/Shoheicode/BudgetApp"));
-                                  },
-                                ),
-                                IconButton(
-                                  icon: Image.asset("assets/web.png",
-                                      color: Colors.black, width: 35.0),
-                                  onPressed: () async {
-                                    await launchUrl(Uri.parse(
-                                        "https://budgetapp-ee73a.web.app/"));
-                                  },
-                                ),
-                              ])
-                        ],
-                      )
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 100,
-                  ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      const AnimatedCard(
-                          imagePath: "assets/chatbot.png",
-                          width: 500,
-                          height: 500),
-                      SizedBox(
-                        height: 100.0,
-                      ),
-                      Column(
-                        children: [
-                          const SansBold("AI-Customer-Support", 40.0,
-                              align: TextAlign.center),
-                          const SizedBox(
-                            height: 15.0,
-                          ),
-                          const Sans(
-                              "This bot is meant to help out and assists users in customer related activities. This bot uses OpenAI and Firebase to allow users to get a great experience chatting and talking with the Bot. Please check it out!",
-                              30.0,
-                              TextAlign.center),
-                          const SizedBox(height: 15.0),
-                          Row(
-                              mainAxisAlignment: MainAxisAlignment
-                                  .center, // Centers content vertically
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                IconButton(
-                                  icon: SvgPicture.asset("assets/github.svg",
-                                      color: Colors.black, width: 35.0),
-                                  onPressed: () async {
-                                    await launchUrl(Uri.parse(
-                                        "https://github.com/Shoheicode/Project-3-AI-Customer-Support/tree/main"));
-                                  },
-                                ),
-                                IconButton(
-                                  icon: Image.asset("assets/web.png",
-                                      color: Colors.black, width: 35.0),
-                                  onPressed: () async {
-                                    await launchUrl(Uri.parse(
-                                        "https://project-3-ai-customer-support.vercel.app/"));
-                                  },
-                                ),
-                              ])
-                        ],
-                      ),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 100,
-                  ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      const AnimatedCard(
-                          imagePath: "assets/flashcards.png",
+                          imagePath: "assets/projects/flashcards.png",
                           width: 500,
                           height: 500),
                       SizedBox(
