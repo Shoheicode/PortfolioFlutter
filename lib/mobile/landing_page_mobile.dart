@@ -57,7 +57,7 @@ class _LandingPageMobileState extends State<LandingPageMobile> {
                 shape: BoxShape.circle,
                 border: Border.all(width: 2.0, color: Colors.black),
               ),
-              child: Image.asset("assets/J.png"),
+              child: Image.asset("assets/icons/J.png"),
             ),
           ),
           const SizedBox(
@@ -70,10 +70,10 @@ class _LandingPageMobileState extends State<LandingPageMobile> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              urlLauncher("assets/linkedin.png",
+              urlLauncher("assets/icons/linkedin.png",
                   "https://www.linkedin.com/in/jason-irie-2bb2b0243/"),
               IconButton(
-                icon: SvgPicture.asset("assets/github.svg",
+                icon: SvgPicture.asset("assets/icons/github.svg",
                     color: Colors.black, width: 35.0),
                 onPressed: () async {
                   await launchUrl(Uri.parse("https://github.com/Shoheicode"));
@@ -170,7 +170,7 @@ class _LandingPageMobileState extends State<LandingPageMobile> {
                         //Image of the avatar
                         radius: 90,
                         backgroundColor: Colors.white,
-                        backgroundImage: AssetImage("assets/J.png"),
+                        backgroundImage: AssetImage("assets/icons/J.png"),
                       ),
                     ),
                   ),
@@ -187,7 +187,7 @@ class _LandingPageMobileState extends State<LandingPageMobile> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image.asset("assets/web.png", height: heightDevice / 3.0),
+              Image.asset("assets/icons/web.png", height: heightDevice / 3.0),
               const SizedBox(
                 height: 30,
               ),
@@ -239,12 +239,12 @@ class _LandingPageMobileState extends State<LandingPageMobile> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 AnimatedCardWeb(
-                    imagePath: "assets/firebase.png", text: "Firebase"),
+                    imagePath: "assets/icons/firebase.png", text: "Firebase"),
                 SizedBox(
                   height: 20,
                 ),
                 AnimatedCardWeb(
-                  imagePath: "assets/flutter.png",
+                  imagePath: "assets/icons/flutter.png",
                   text: "Flutter",
                   fit: BoxFit.contain,
                   reverese: true,
@@ -252,7 +252,8 @@ class _LandingPageMobileState extends State<LandingPageMobile> {
                 SizedBox(
                   height: 20,
                 ),
-                AnimatedCardWeb(imagePath: "assets/java.png", text: "Java"),
+                AnimatedCardWeb(
+                    imagePath: "assets/icons/java.png", text: "Java"),
                 SizedBox(
                   height: 20,
                 ),

@@ -123,7 +123,7 @@ class _ProjectPageMobileState extends State<ProjectPageMobile> {
                     ),
                   ),
                   background: Image.asset(
-                    "assets/project.png",
+                    "assets/projects/project.png",
                     filterQuality: FilterQuality.high,
                     fit: BoxFit.cover,
                   ),
@@ -159,7 +159,7 @@ class _ProjectPageMobileState extends State<ProjectPageMobile> {
                               TextAlign.center),
                           const SizedBox(height: 15.0),
                           IconButton(
-                            icon: SvgPicture.asset("assets/github.svg",
+                            icon: SvgPicture.asset("assets/icons/github.svg",
                                 color: Colors.black, width: 35.0),
                             onPressed: () async {
                               await launchUrl(Uri.parse(
@@ -207,15 +207,17 @@ class _ProjectPageMobileState extends State<ProjectPageMobile> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 IconButton(
-                                  icon: SvgPicture.asset("assets/github.svg",
-                                      color: Colors.black, width: 35.0),
+                                  icon: SvgPicture.asset(
+                                      "assets/icons/github.svg",
+                                      color: Colors.black,
+                                      width: 35.0),
                                   onPressed: () async {
                                     await launchUrl(Uri.parse(
                                         "https://github.com/Shoheicode/fitness-app-project"));
                                   },
                                 ),
                                 IconButton(
-                                  icon: Image.asset("assets/web.png",
+                                  icon: Image.asset("assets/icons/web.png",
                                       color: Colors.black, width: 35.0),
                                   onPressed: () async {
                                     await launchUrl(Uri.parse(
@@ -263,15 +265,17 @@ class _ProjectPageMobileState extends State<ProjectPageMobile> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               IconButton(
-                                icon: SvgPicture.asset("assets/github.svg",
-                                    color: Colors.black, width: 35.0),
+                                icon: SvgPicture.asset(
+                                    "assets/icons/github.svg",
+                                    color: Colors.black,
+                                    width: 35.0),
                                 onPressed: () async {
                                   await launchUrl(Uri.parse(
                                       "https://github.com/Shoheicode/Project-4-AI-Flashcards"));
                                 },
                               ),
                               IconButton(
-                                icon: Image.asset("assets/web.png",
+                                icon: Image.asset("assets/icons/web.png",
                                     color: Colors.black, width: 35.0),
                                 onPressed: () async {
                                   await launchUrl(Uri.parse(

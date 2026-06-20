@@ -54,7 +54,7 @@ class _ContactMobileState extends State<ContactMobile> {
                 shape: BoxShape.circle,
                 border: Border.all(width: 2.0, color: Colors.black),
               ),
-              child: Image.asset("assets/J.png"),
+              child: Image.asset("assets/icons/J.png"),
             ),
           ),
           const SizedBox(
@@ -67,10 +67,10 @@ class _ContactMobileState extends State<ContactMobile> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              urlLauncher("assets/linkedin.png",
+              urlLauncher("assets/icons/linkedin.png",
                   "https://www.linkedin.com/in/jason-irie-2bb2b0243/"),
               IconButton(
-                icon: SvgPicture.asset("assets/github.svg",
+                icon: SvgPicture.asset("assets/icons/github.svg",
                     color: Colors.black, width: 35.0),
                 onPressed: () async {
                   await launchUrl(Uri.parse("https://github.com/Shoheicode"));
@@ -119,7 +119,7 @@ class _ContactMobileState extends State<ContactMobile> {
               ),
               flexibleSpace: FlexibleSpaceBar(
                 background: Image.asset(
-                  "assets/phone.jpg",
+                  "assets/contact/phone.jpg",
                   fit: BoxFit.cover,
                 ),
               ),

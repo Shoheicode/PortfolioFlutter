@@ -53,7 +53,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
           const CircleAvatar(
             radius: 70,
             backgroundColor: Colors.white,
-            backgroundImage: AssetImage("assets/J.png"),
+            backgroundImage: AssetImage("assets/icons/J.png"),
           ),
           const SizedBox(
             height: 15,
@@ -155,7 +155,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                     //Image of the avatar
                     radius: 180,
                     backgroundColor: Colors.white,
-                    backgroundImage: AssetImage("assets/J.png"),
+                    backgroundImage: AssetImage("assets/icons/J.png"),
                   ),
                 ),
               ),
@@ -169,7 +169,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image.asset("assets/web.png", height: heightDevice / 2.0),
+              Image.asset("assets/icons/web.png", height: heightDevice / 2.0),
               Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -229,14 +229,16 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     AnimatedCardWeb(
-                        imagePath: "assets/firebase.png", text: "Firebase"),
+                        imagePath: "assets/icons/firebase.png",
+                        text: "Firebase"),
                     AnimatedCardWeb(
-                      imagePath: "assets/flutter.png",
+                      imagePath: "assets/icons/flutter.png",
                       text: "Flutter",
                       fit: BoxFit.contain,
                       reverese: true,
                     ),
-                    AnimatedCardWeb(imagePath: "assets/java.png", text: "Java"),
+                    AnimatedCardWeb(
+                        imagePath: "assets/icons/java.png", text: "Java"),
                     AnimatedCardWeb(
                       imagePath: "assets/icons/cpp.png",
                       text: "C++",

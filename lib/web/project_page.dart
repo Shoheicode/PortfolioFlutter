@@ -49,7 +49,7 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
             const CircleAvatar(
               radius: 70,
               backgroundColor: Colors.white,
-              backgroundImage: AssetImage("assets/J.png"),
+              backgroundImage: AssetImage("assets/icons/J.png"),
             ),
             const SizedBox(
               height: 15,
@@ -61,10 +61,10 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                urlLauncher("linkedin.png",
+                urlLauncher("assets/icons/linkedin.png",
                     "https://www.linkedin.com/in/jason-irie-2bb2b0243/"),
                 IconButton(
-                  icon: SvgPicture.asset("assets/github.svg",
+                  icon: SvgPicture.asset("assets/icons/github.svg",
                       color: Colors.black, width: 35.0),
                   onPressed: () async {
                     await launchUrl(Uri.parse("https://github.com/Shoheicode"));
@@ -102,7 +102,7 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
                     ),
                   ),
                   background: Image.asset(
-                    "assets/project.png",
+                    "assets/projects/project.png",
                     filterQuality: FilterQuality.high,
                     fit: BoxFit.cover,
                   ),
@@ -166,7 +166,7 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
                           ),
                           const SizedBox(height: 15.0),
                           IconButton(
-                            icon: SvgPicture.asset("assets/github.svg",
+                            icon: SvgPicture.asset("assets/icons/github.svg",
                                 color: Colors.black, width: 35.0),
                             onPressed: () async {
                               await launchUrl(Uri.parse(
@@ -199,7 +199,7 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
                           const SizedBox(height: 15.0),
                           Row(children: [
                             IconButton(
-                              icon: SvgPicture.asset("assets/github.svg",
+                              icon: SvgPicture.asset("assets/icons/github.svg",
                                   color: Colors.black, width: 35.0),
                               onPressed: () async {
                                 await launchUrl(Uri.parse(
@@ -207,7 +207,7 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
                               },
                             ),
                             IconButton(
-                              icon: Image.asset("assets/web.png",
+                              icon: Image.asset("assets/icons/web.png",
                                   color: Colors.black, width: 35.0),
                               onPressed: () async {
                                 await launchUrl(Uri.parse(
@@ -255,15 +255,17 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
                           Row(
                             children: [
                               IconButton(
-                                icon: SvgPicture.asset("assets/github.svg",
-                                    color: Colors.black, width: 35.0),
+                                icon: SvgPicture.asset(
+                                    "assets/icons/github.svg",
+                                    color: Colors.black,
+                                    width: 35.0),
                                 onPressed: () async {
                                   await launchUrl(Uri.parse(
                                       "https://github.com/Shoheicode/Project-4-AI-Flashcards"));
                                 },
                               ),
                               IconButton(
-                                icon: Image.asset("assets/web.png",
+                                icon: Image.asset("assets/icons/web.png",
                                     color: Colors.black, width: 35.0),
                                 onPressed: () async {
                                   await launchUrl(Uri.parse(

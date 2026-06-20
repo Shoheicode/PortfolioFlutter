@@ -40,7 +40,7 @@ class _AboutState extends State<AboutWeb> {
           const CircleAvatar(
             radius: 70,
             backgroundColor: Colors.white,
-            backgroundImage: AssetImage("assets/J.png"),
+            backgroundImage: AssetImage("assets/icons/J.png"),
           ),
           const SizedBox(
             height: 15,
@@ -52,10 +52,10 @@ class _AboutState extends State<AboutWeb> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              urlLauncher("assets/linkedin.png",
+              urlLauncher("assets/icons/linkedin.png",
                   "https://www.linkedin.com/in/jason-irie-2bb2b0243/"),
               IconButton(
-                icon: SvgPicture.asset("assets/github.svg",
+                icon: SvgPicture.asset("assets/icons/github.svg",
                     color: Colors.black, width: 35.0),
                 onPressed: () async {
                   await launchUrl(Uri.parse("https://github.com/Shoheicode"));
@@ -198,13 +198,15 @@ class _AboutState extends State<AboutWeb> {
                     ]),
               ),
               const AnimatedCard(
-                imagePath: "assets/flutter.png",
+                imagePath: "assets/icons/flutter.png",
                 width: 300,
                 height: 300,
                 reverese: true,
               ),
               const AnimatedCard(
-                  imagePath: "assets/firebase.png", width: 300, height: 300)
+                  imagePath: "assets/icons/firebase.png",
+                  width: 300,
+                  height: 300)
             ],
           ),
           const SizedBox(
@@ -214,7 +216,7 @@ class _AboutState extends State<AboutWeb> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               const AnimatedCard(
-                  imagePath: "assets/java.png", width: 300, height: 300),
+                  imagePath: "assets/icons/java.png", width: 300, height: 300),
               SizedBox(
                 height: heightDevice / 3,
                 child: const Column(children: [
