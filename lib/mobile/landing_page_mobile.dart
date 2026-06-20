@@ -257,7 +257,7 @@ class _LandingPageMobileState extends State<LandingPageMobile> {
                   height: 20,
                 ),
                 AnimatedCardWeb(
-                  imagePath: "assets/cpp.png",
+                  imagePath: "assets/icons/cpp.png",
                   text: "C++",
                   reverese: true,
                 ),

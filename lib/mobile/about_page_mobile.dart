@@ -157,7 +157,7 @@ class _AboutMobileState extends State<AboutMobile> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 const AnimatedCard(
-                    imagePath: "assets/cpp.png", width: 300, height: 300),
+                    imagePath: "assets/icons/cpp.png", width: 300, height: 300),
                 const SizedBox(
                   height: 40,
                 ),

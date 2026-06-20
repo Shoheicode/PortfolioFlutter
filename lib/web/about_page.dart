@@ -159,7 +159,7 @@ class _AboutState extends State<AboutWeb> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               const AnimatedCard(
-                  imagePath: "assets/cpp.png", width: 300, height: 300),
+                  imagePath: "assets/icons/cpp.png", width: 300, height: 300),
               SizedBox(
                 height: heightDevice / 3,
                 child: const Column(children: [

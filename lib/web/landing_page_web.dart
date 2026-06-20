@@ -238,7 +238,7 @@ class _LandingPageWebState extends State<LandingPageWeb> {
                     ),
                     AnimatedCardWeb(imagePath: "assets/java.png", text: "Java"),
                     AnimatedCardWeb(
-                      imagePath: "assets/cpp.png",
+                      imagePath: "assets/icons/cpp.png",
                       text: "C++",
                       reverese: true,
                     )
