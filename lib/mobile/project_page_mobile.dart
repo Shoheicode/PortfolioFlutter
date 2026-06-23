@@ -88,9 +88,6 @@ class _ProjectPageMobileState extends State<ProjectPageMobile> {
                 SizedBox(
                   height: 15,
                 ),
-                TabsMobile(
-                  "Contact",
-                ),
               ],
             )
           ]),

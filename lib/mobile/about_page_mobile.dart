@@ -83,9 +83,6 @@ class _AboutMobileState extends State<AboutMobile> {
               SizedBox(
                 height: 15,
               ),
-              TabsMobile(
-                "Contact",
-              ),
             ],
           )
         ]),

@@ -101,9 +101,6 @@ class _LandingPageMobileState extends State<LandingPageMobile> {
               SizedBox(
                 height: 15,
               ),
-              TabsMobile(
-                "Contact",
-              ),
             ],
           )
         ]),
