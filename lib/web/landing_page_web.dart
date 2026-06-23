@@ -65,10 +65,10 @@ class _LandingPageWebState extends State<LandingPageWeb> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              urlLauncher("assets/linkedin.png",
+              urlLauncher("assets/icons/linkedin.png",
                   "https://www.linkedin.com/in/jason-irie-2bb2b0243/"),
               IconButton(
-                icon: SvgPicture.asset("assets/github.svg",
+                icon: SvgPicture.asset("assets/icons/github.svg",
                     color: Colors.black, width: 35.0),
                 onPressed: () async {
                   await launchUrl(Uri.parse("https://github.com/Shoheicode"));
@@ -99,7 +99,6 @@ class _LandingPageWebState extends State<LandingPageWeb> {
               Spacer(),
               TabsWeb("About"),
               Spacer(),
-              TabsWeb("Contact")
             ]),
       ),
       //The Main body of the web application

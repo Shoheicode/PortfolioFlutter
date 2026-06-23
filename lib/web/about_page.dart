@@ -86,7 +86,6 @@ class _AboutState extends State<AboutWeb> {
               Spacer(),
               TabsWeb("About"),
               Spacer(),
-              TabsWeb("Contact")
             ]),
       ),
       //The Main body of the web application
@@ -154,90 +153,6 @@ class _AboutState extends State<AboutWeb> {
                     ],
                   )
                 ]),
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              const AnimatedCard(
-                  imagePath: "assets/icons/cpp.png", width: 300, height: 300),
-              SizedBox(
-                height: heightDevice / 3,
-                child: const Column(children: [
-                  SansBold("C++", 40),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Sans(
-                      "Do you need help creating an application in C++? I have made many projects using C++",
-                      20,
-                      TextAlign.center)
-                ]),
-              )
-            ],
-          ),
-          const SizedBox(
-            height: 100.0,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              SizedBox(
-                height: heightDevice / 3,
-                width: widthDevice / 2,
-                child: const Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SansBold("Flutter and Firebase", 40),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Sans(
-                          "Do you need help creating a web application or app? I know my way using Flutter and Firebase and competed in the Google Solution Challenge.",
-                          20,
-                          TextAlign.center)
-                    ]),
-              ),
-              const AnimatedCard(
-                imagePath: "assets/icons/flutter.png",
-                width: 300,
-                height: 300,
-                reverese: true,
-              ),
-              const AnimatedCard(
-                  imagePath: "assets/icons/firebase.png",
-                  width: 300,
-                  height: 300)
-            ],
-          ),
-          const SizedBox(
-            height: 100.0,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              const AnimatedCard(
-                  imagePath: "assets/icons/java.png", width: 300, height: 300),
-              SizedBox(
-                height: heightDevice / 3,
-                child: const Column(children: [
-                  SansBold("Java", 40),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Sans(
-                      "Do you need help creating an application using Java? That's my cup of joe (joke). ",
-                      20,
-                      TextAlign.center),
-                  Sans(
-                      "I have coded many things from Robots to games of Tic-Tac-Toe.",
-                      20,
-                      TextAlign.center),
-                ]),
-              ),
-            ],
-          ),
-          const SizedBox(
-            height: 100.0,
           ),
         ],
       ),

@@ -129,10 +129,6 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
                       color: Colors.black,
                     ),
                     Spacer(),
-                    TabsWeb(
-                      "Contact",
-                      color: Colors.black,
-                    )
                   ],
                 ),
               )

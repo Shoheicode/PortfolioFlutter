@@ -49,7 +49,7 @@ class _ContactState extends State<ContactWeb> {
           const CircleAvatar(
             radius: 70,
             backgroundColor: Colors.white,
-            backgroundImage: AssetImage("J.png"),
+            backgroundImage: AssetImage("assets/icons/J.png"),
           ),
           const SizedBox(
             height: 15,
@@ -105,7 +105,6 @@ class _ContactState extends State<ContactWeb> {
                   Spacer(),
                   TabsWeb("About"),
                   Spacer(),
-                  TabsWeb("Contact")
                 ],
               ),
             )
