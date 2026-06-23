@@ -152,6 +152,8 @@ class _LandingPageMobileState extends State<LandingPageMobile> {
                       Sans("jsirie10@gmail.com", 15.0, TextAlign.center),
                     ],
                   ),
+                  const SizedBox(height: 15.0),
+                  const ResumeButton(),
                   const SizedBox(
                     height: 15,
                   ),

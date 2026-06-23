@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:logger/logger.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class TabsWeb extends StatefulWidget {
   final title;
@@ -447,4 +448,31 @@ Future DialogError(BuildContext context, String title) {
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10.0)),
           ));
+}
+
+class ResumeButton extends StatelessWidget {
+  const ResumeButton({super.key});
+
+  Future<void> _openResume() async {
+    final uri = Uri.parse('assets/resume.pdf');
+
+    final success = await launchUrl(
+      uri,
+      webOnlyWindowName: '_blank',
+      mode: LaunchMode.platformDefault,
+    );
+
+    if (!success) {
+      throw Exception('Could not open resume.');
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return FilledButton.icon(
+      onPressed: _openResume,
+      icon: const Icon(Icons.download),
+      label: const Text('Download Resume'),
+    );
+  }
 }
