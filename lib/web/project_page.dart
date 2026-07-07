@@ -164,29 +164,11 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
                                 TextAlign.center),
                           ),
                           const SizedBox(height: 15.0),
-                          Row(children: [
-                            ResearchButton()
-                            // IconButton(
-                            //   icon: SvgPicture.asset("assets/icons/github.svg",
-                            //       color: Colors.black, width: 35.0),
-                            //   onPressed: () async {
-                            //     await launchUrl(Uri.parse(
-                            //         "https://github.com/Shoheicode/fitness-app-project"));
-                            //   },
-                            // ),
-                            // IconButton(
-                            //   icon: Image.asset("assets/icons/web.png",
-                            //       color: Colors.black, width: 35.0),
-                            //   onPressed: () async {
-                            //     await launchUrl(Uri.parse(
-                            //         "https://fitness-app-project-theta.vercel.app/"));
-                            //   },
-                            // ),
-                          ])
+                          Row(children: [ResearchButton()])
                         ],
                       ),
                       const AnimatedCard(
-                          imagePath: "assets/projects/astarfitness.png",
+                          imagePath: "assets/projects/ezie.png",
                           width: 500,
                           height: 500),
                     ],

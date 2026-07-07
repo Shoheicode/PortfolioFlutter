@@ -137,6 +137,63 @@ class _ProjectPageMobileState extends State<ProjectPageMobile> {
                   Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
+                      const AnimatedCard(
+                          imagePath: "assets/projects/ezie.png",
+                          width: 500,
+                          height: 500),
+                      SizedBox(
+                        height: 100.0,
+                      ),
+                      Column(
+                        children: [
+                          const SansBold(
+                            "Advancing the EZIE Observing System Simulation Experiment (OSSE) for Auroral Space Weather Analysis",
+                            40.0,
+                            align: TextAlign.center,
+                          ),
+                          const SizedBox(
+                            height: 15.0,
+                          ),
+                          const Sans(
+                              "An end-to-end Python pipeline was developed and optimized for NASA JPL’s EZIE mission to process raw satellite observations, simulate atmospheric and magnetic conditions, and retrieve auroral magnetic field perturbations for improved space weather analysis.",
+                              30.0,
+                              TextAlign.center),
+                          const SizedBox(height: 15.0),
+                          Row(
+                              mainAxisAlignment: MainAxisAlignment
+                                  .center, // Centers content vertically
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                ResearchButton()
+                                // IconButton(
+                                //   icon: SvgPicture.asset(
+                                //       "assets/icons/github.svg",
+                                //       color: Colors.black,
+                                //       width: 35.0),
+                                //   onPressed: () async {
+                                //     await launchUrl(Uri.parse(
+                                //         "https://github.com/Shoheicode/fitness-app-project"));
+                                //   },
+                                // ),
+                                // IconButton(
+                                //   icon: Image.asset("assets/icons/web.png",
+                                //       color: Colors.black, width: 35.0),
+                                //   onPressed: () async {
+                                //     await launchUrl(Uri.parse(
+                                //         "https://fitness-app-project-theta.vercel.app/"));
+                                //   },
+                                // ),
+                              ])
+                        ],
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 200,
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
                       AnimatedCard(
                           imagePath: "assets/projects/Iceman.png",
                           width: widthDevice,
