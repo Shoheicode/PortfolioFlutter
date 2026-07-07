@@ -159,7 +159,7 @@ class _AboutState extends State<AboutWeb> {
                 ]),
           ),
           const SizedBox(
-            height: 500.0,
+            height: 700.0,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -167,28 +167,31 @@ class _AboutState extends State<AboutWeb> {
                 SansBold("Degrees & Coursework", 40.0),
                 SizedBox(height: 20.0),
                 SizedBox(
-                  width: 800,
+                  width: 900,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Row(
                         children: [
                           const CircleAvatar(
-                            radius: 70,
+                            radius: 100,
                             backgroundColor: Colors.white,
                             backgroundImage:
                                 AssetImage("assets/about/ucla.png"),
                           ),
+                          SizedBox(width: 25),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               SansBold("University of California, Los Angeles",
                                   22.0),
                               SizedBox(height: 5),
-                              Sans(
-                                "Bachelors of Science in Mathematics of Computation",
-                                16.0,
-                                TextAlign.start,
+                              SizedBox(
+                                child: Sans(
+                                  "Bachelors of Science in Mathematics of Computation",
+                                  16.0,
+                                  TextAlign.start,
+                                ),
                               ),
                               SizedBox(height: 8),
                               SizedBox(
@@ -197,7 +200,7 @@ class _AboutState extends State<AboutWeb> {
                                   15.0,
                                   TextAlign.start,
                                 ),
-                                width: 700,
+                                width: 600,
                               ),
                             ],
                           )
@@ -206,20 +209,24 @@ class _AboutState extends State<AboutWeb> {
                       SizedBox(height: 25),
                       Row(children: [
                         const CircleAvatar(
-                          radius: 70,
+                          radius: 100,
                           backgroundColor: Colors.white,
                           backgroundImage:
                               AssetImage("assets/about/elcamino.png"),
                         ),
+                        SizedBox(width: 25),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             SansBold("El Camino Community College", 22.0),
                             SizedBox(height: 5),
-                            Sans(
-                              "Associates of Science in Mathematics for Transfer; Associates of Science in Physics for Transfer; Certificate of Achievement in Computer Science",
-                              16.0,
-                              TextAlign.start,
+                            SizedBox(
+                              child: Sans(
+                                "Associates of Science in Mathematics for Transfer; Associates of Science in Physics for Transfer; Certificate of Achievement in Computer Science",
+                                16.0,
+                                TextAlign.start,
+                              ),
+                              width: 600,
                             ),
                             SizedBox(height: 8),
                             SizedBox(
@@ -228,7 +235,7 @@ class _AboutState extends State<AboutWeb> {
                                 15.0,
                                 TextAlign.start,
                               ),
-                              width: 700,
+                              width: 600,
                             ),
                           ],
                         )
@@ -239,8 +246,74 @@ class _AboutState extends State<AboutWeb> {
               ],
             ),
           ),
+          SizedBox(
+            height: 700.0,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const SansBold("Experience Highlights", 40.0),
+                const SizedBox(height: 20.0),
+                const SizedBox(
+                  width: 850,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      ExperienceBulletPoint(
+                        title: "API Engineer, Magnakom",
+                        description:
+                            " — Built Python/FastAPI services, Streamlit tools, Next.js/React applications, and REST API integrations to automate e-commerce workflows across inventory, pricing, shipping, sales, and reporting systems.",
+                        size: 20.0,
+                      ),
+                      ExperienceBulletPoint(
+                        title: "Software Engineer I, Hire Henry",
+                        description:
+                            " — Improved Flutter web interfaces, added Firebase authentication, integrated Google Maps APIs, developed WebSocket communication between the frontend and backend, and deployed responsive Flutter web applications.",
+                        size: 20.0,
+                      ),
+                      ExperienceBulletPoint(
+                        title:
+                            "Undergraduate Student Researcher, UCLA Structures-Computer Interaction Lab",
+                        description:
+                            " — Contributed to soft robotics simulation, AgriCruiser/AgriNimble robotics systems, embedded electronics, LiDAR-based navigation, reinforcement learning, and terrain-aware mapping.",
+                        size: 20.0,
+                      ),
+                      ExperienceBulletPoint(
+                        title:
+                            "Engineer Intern, NASA Jet Propulsion Laboratory",
+                        description:
+                            " — Used Python, MATLAB, and C++ to improve EZIE OSSE simulation workflows, process large mission datasets, and support remote sensing research.",
+                        size: 20.0,
+                      ),
+                      ExperienceBulletPoint(
+                        title: "Software Engineering Fellow, Headstarter AI",
+                        description:
+                            " — Built and deployed AI projects using React, Next.js, Firebase, Clerk, Vercel, Pinecone, and OpenAI APIs.",
+                        size: 20.0,
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 20.0),
+                OutlinedButton.icon(
+                  onPressed: () async {
+                    await launchUrl(
+                      Uri.parse(
+                        "https://www.linkedin.com/in/jason-irie-2bb2b0243/details/experience/",
+                      ),
+                    );
+                  },
+                  icon: Image.asset(
+                    "assets/icons/linkedin.png",
+                    width: 22,
+                  ),
+                  label: const Text("View Full Experience on LinkedIn"),
+                ),
+              ],
+            ),
+          ),
           const SizedBox(
-            height: 500.0,
+            height: 800.0,
             child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -250,22 +323,30 @@ class _AboutState extends State<AboutWeb> {
                     height: 15.0,
                   ),
                   SizedBox(
-                    width: 700,
+                    width: 1000,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
                         BulletPoint(
-                            text:
-                                'Academic Achievement in Computer Science Award — Recognized for outstanding academic achievement in computer science coursework.'),
+                          text:
+                              'Academic Achievement in Computer Science Award — Recognized for outstanding academic achievement in computer science coursework.',
+                          size: 20.0,
+                        ),
                         BulletPoint(
-                            text:
-                                'Forrest G. Murdock Leadership Award — Awarded for leadership, service, responsibility, communication, initiative, and collaboration.'),
+                          text:
+                              'Forrest G. Murdock Leadership Award — Awarded for leadership, service, responsibility, communication, initiative, and collaboration.',
+                          size: 20.0,
+                        ),
                         BulletPoint(
-                            text:
-                                'Wayne and Margaret Bemis Scholarship for Sciences — Awarded for strong academic performance and interest in pursuing science-related fields.'),
+                          text:
+                              'Wayne and Margaret Bemis Scholarship for Sciences — Awarded for strong academic performance and interest in pursuing science-related fields.',
+                          size: 20.0,
+                        ),
                         BulletPoint(
-                            text:
-                                'Overall Best Robot Prototype Award — Recognized for developing a robotics prototype using OpenCV, Python, machine learning, and hardware/software integration.'),
+                          text:
+                              'Overall Best Robot Prototype Award — Recognized for developing a robotics prototype using OpenCV, Python, machine learning, and hardware/software integration.',
+                          size: 20.0,
+                        ),
                       ],
                     ),
                   )

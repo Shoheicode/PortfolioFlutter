@@ -506,10 +506,12 @@ class ResearchButton extends StatelessWidget {
 
 class BulletPoint extends StatelessWidget {
   final String text;
+  final double size;
 
   const BulletPoint({
     super.key,
     required this.text,
+    required this.size,
   });
 
   @override
@@ -519,11 +521,64 @@ class BulletPoint extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text('• '),
+          Text('• ',
+              style: TextStyle(fontSize: size, fontWeight: FontWeight.bold)),
           Expanded(
             child: Text(
               text,
-              style: const TextStyle(fontSize: 14),
+              style: TextStyle(fontSize: size),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class ExperienceBulletPoint extends StatelessWidget {
+  final String title;
+  final String description;
+  final double size;
+
+  const ExperienceBulletPoint({
+    super.key,
+    required this.title,
+    required this.description,
+    this.size = 15.0,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 10),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            '• ',
+            style: TextStyle(
+              fontSize: size,
+              color: Colors.black,
+            ),
+          ),
+          Expanded(
+            child: RichText(
+              text: TextSpan(
+                style: TextStyle(
+                  fontSize: size,
+                  color: Colors.black,
+                  height: 1.4,
+                ),
+                children: [
+                  TextSpan(
+                    text: title,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  TextSpan(text: description),
+                ],
+              ),
             ),
           ),
         ],
