@@ -481,8 +481,7 @@ class ResearchButton extends StatelessWidget {
   const ResearchButton({super.key});
 
   Future<void> _openResume() async {
-    final uri = Uri.parse(
-        'assets/JIFRESSE_Summer_Internship_Program__JSIP__Report.pdf');
+    final uri = Uri.parse('assets/report.pdf');
 
     final success = await launchUrl(
       uri,
