@@ -476,3 +476,31 @@ class ResumeButton extends StatelessWidget {
     );
   }
 }
+
+class ResearchButton extends StatelessWidget {
+  const ResearchButton({super.key});
+
+  Future<void> _openResume() async {
+    final uri = Uri.parse(
+        'assets/JIFRESSE_Summer_Internship_Program__JSIP__Report.pdf');
+
+    final success = await launchUrl(
+      uri,
+      webOnlyWindowName: '_blank',
+      mode: LaunchMode.platformDefault,
+    );
+
+    if (!success) {
+      throw Exception('Could not open resume.');
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return FilledButton.icon(
+      onPressed: _openResume,
+      icon: const Icon(Icons.download),
+      label: const Text('Research Paper'),
+    );
+  }
+}
