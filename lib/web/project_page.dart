@@ -150,6 +150,7 @@ class _ProjectPageWebState extends State<ProjectPageWeb> {
                             child: SansBold(
                               "Advancing the EZIE Observing System Simulation Experiment (OSSE) for Auroral Space Weather Analysis",
                               40.0,
+                              align: TextAlign.center,
                             ),
                           ),
                           const SizedBox(
